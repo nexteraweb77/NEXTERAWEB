@@ -1,14 +1,17 @@
 {
-  "name": "tmp-app",
+  "name": "nexteraweb",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "postinstall": "node scripts/patch-next-network-host.cjs",
+    "dev": "node scripts/patch-next-network-host.cjs && next dev -H 127.0.0.1",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/patch-next-network-host.cjs && next start -H 0.0.0.0",
     "lint": "eslint"
   },
   "dependencies": {
+    "framer-motion": "^12.38.0",
+    "lenis": "^1.3.23",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
@@ -24,3 +27,4 @@
     "typescript": "^5"
   }
 }
+
