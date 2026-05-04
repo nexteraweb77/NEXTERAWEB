@@ -194,15 +194,17 @@ html.lenis body {
   .tagline-neon-shimmer {
     background-image: linear-gradient(
       105deg,
-      #5eead4 0%,
-      #a7f3d0 14%,
-      #ecfdf5 30%,
-      #6ee7b7 42%,
-      #fafafa 50%,
-      #34d399 58%,
-      #ccfbf1 72%,
-      #2dd4bf 88%,
-      #5eead4 100%
+      #22c55e 0%,
+      #4ade80 12%,
+      #86efac 24%,
+      #bbf7d0 34%,
+      #ecfccb 44%,
+      #d9f99d 50%,
+      #a3e635 56%,
+      #4ade80 64%,
+      #34d399 76%,
+      #10b981 88%,
+      #22c55e 100%
     );
     background-size: 240% 100%;
     background-position: 0% 50%;
@@ -211,8 +213,9 @@ html.lenis body {
     color: transparent;
     -webkit-text-fill-color: transparent;
     animation: tagline-neon-flow 5.5s ease-in-out infinite alternate;
-    filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.42))
-      drop-shadow(0 0 22px rgba(45, 212, 191, 0.2));
+    filter: drop-shadow(0 0 12px rgba(74, 222, 128, 0.55))
+      drop-shadow(0 0 26px rgba(34, 197, 94, 0.38))
+      drop-shadow(0 0 44px rgba(163, 230, 53, 0.18));
   }
 }
 
@@ -220,6 +223,7 @@ html.lenis body {
   .tagline-neon-shimmer {
     animation: none !important;
     background-position: 35% 50%;
-    filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.28));
+    filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.4))
+      drop-shadow(0 0 22px rgba(34, 197, 94, 0.22));
   }
 }
