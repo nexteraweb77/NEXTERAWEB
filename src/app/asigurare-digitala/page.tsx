@@ -179,8 +179,13 @@ export default function AsigurareDigitalaPage() {
                 <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
                   <div>Tot ce include GROWTH</div>
                   <div>
-                    Suport Prioritar (VIP): Rezolv cererile tale în maxim 24–48 de
-                    ore
+                    <span className="text-base font-semibold leading-7 text-white sm:text-[1.07rem]">
+                      Suport Prioritar
+                    </span>{" "}
+                    <span className="bg-gradient-to-r from-amber-200 via-yellow-200 to-amber-400 bg-clip-text text-base font-semibold text-transparent sm:text-lg">
+                      VIP
+                    </span>
+                    : Rezolv cererile tale în maxim 24–48 de ore
                   </div>
                   <div>
                     Îmbunătățiri constante: Adăugăm funcții noi, butoane sau

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const projects = [
   {
-    href: "https://salaevenimenterestaurantnexteraweb.netlify.app/",
+    href: "https://wispy-hill-2273.nexteraweb77.workers.dev/",
     title: "Sală evenimente & restaurant",
     tag: "Evenimente · HoReCa",
     accent: "from-rose-500/20 via-amber-500/10 to-transparent",
@@ -12,7 +12,7 @@ const projects = [
       "Site amplu pentru locație premium: tur vizual, categorii de evenimente, meniu și flux clar spre rezervare și ofertă",
   },
   {
-    href: "https://fitnesprogramariformularcontact.netlify.app/",
+    href: "https://dawn-darkness-bab5.nexteraweb77.workers.dev/",
     title: "Fitness · programări & contact",
     tag: "Wellness · Formulare",
     accent: "from-emerald-500/20 via-teal-500/10 to-transparent",
@@ -20,15 +20,15 @@ const projects = [
       "Landing dedicat domeniului fitness, cu accent pe programări și date de contact colectate inteligent prin formular",
   },
   {
-    href: "https://serviceautolevelup.netlify.app/",
-    title: "Service auto premium · Brașov",
-    tag: "Auto · Servicii locale",
-    accent: "from-sky-500/15 via-cyan-500/10 to-transparent",
+    href: "https://late-scene-1f0d.nexteraweb77.workers.dev/",
+    title: "Cabinet veterinar",
+    tag: "Veterinar · Consult & prevenție",
+    accent: "from-cyan-500/18 via-teal-500/10 to-transparent",
     description:
-      "Prezentare completă pentru service auto: servicii pe categorii, proces transparent, recenzii și contact rapid",
+      "Prezentare pentru cabinet veterinar: consult și prevenție, servicii, flux de vizită clar și contact rapid pentru programări",
   },
   {
-    href: "https://sitebeautypremium.netlify.app/",
+    href: "https://noisy-butterfly-484b.nexteraweb77.workers.dev/",
     title: "Beauty Studio",
     tag: "Beauty · Programări",
     accent: "from-fuchsia-500/20 via-pink-500/10 to-transparent",
@@ -36,7 +36,7 @@ const projects = [
       "Studio beauty cu structură clară: servicii, rezultate înainte/după, FAQ și programare rapidă spre WhatsApp",
   },
   {
-    href: "https://cabinetavocaturantw.netlify.app/",
+    href: "https://calm-sky-5c0f.nexteraweb77.workers.dev/",
     title: "Avocat civil / penal",
     tag: "Juridic · Concierge",
     accent: "from-violet-500/20 via-slate-500/10 to-transparent",

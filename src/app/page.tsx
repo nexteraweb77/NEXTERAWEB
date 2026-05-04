@@ -924,7 +924,7 @@ export default function Home() {
               </h2>
               <div className="mt-4 max-w-2xl space-y-3 text-zinc-300">
                 <p className="text-lg font-medium leading-snug text-white sm:text-xl">
-                  Hai să construim ceva memorabil
+                  Hai să construim ceva memorabil !
                 </p>
                 <p className="max-w-xl text-pretty text-base font-normal leading-relaxed text-[#F5F5F7]/95 sm:text-lg sm:leading-relaxed">
                   <a
