@@ -39,8 +39,8 @@ export default function Home() {
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-12 min-[430px]:px-5 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-14 lg:pb-5 lg:pt-20">
             <Reveal className="relative" instant>
               <div className="-translate-y-2.5">
-              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-6 text-center max-[360px]:px-0.5 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:gap-y-6 lg:text-left">
-                <div className="flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-3 sm:max-w-sm sm:gap-3.5 lg:w-auto lg:max-w-[15rem] lg:items-start lg:gap-4">
+              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-8 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:gap-y-6 lg:text-left">
+                <div className="flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-4 sm:max-w-sm sm:gap-3.5 lg:w-auto lg:max-w-[15rem] lg:items-start lg:gap-4">
                   <Image
                     src="/logo.png"
                     alt="NEXTERAWEB logo"
@@ -50,7 +50,7 @@ export default function Home() {
                     priority
                   />
                   <div
-                    className={`tagline-neon-shimmer ${montserrat.className} w-full text-balance text-center leading-none text-[clamp(1.34rem,4.85vw,2.18rem)] font-bold uppercase tracking-[0.08em] min-[400px]:tracking-[0.12em] sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
+                    className={`tagline-neon-shimmer ${montserrat.className} w-full text-balance text-center text-[clamp(1.72rem,7.5vw,2.85rem)] font-bold uppercase leading-[1.12] tracking-[0.07em] min-[400px]:tracking-[0.1em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
                     NEXTERAWEB
                   </div>
@@ -85,7 +85,7 @@ export default function Home() {
                   fără intermediari, fără bătăi de cap
                 </span>
               </p>
-              <div className="mx-auto mt-6 flex w-full max-w-xl flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3">
+              <div className="mx-auto mt-7 flex w-full max-w-xl flex-col gap-3 max-sm:mt-9 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3">
                 <a
                   href="#contact"
                   className="inline-flex min-h-14 w-full max-w-full items-center justify-center rounded-full bg-emerald-500/90 px-4 py-2.5 text-center text-sm font-semibold leading-snug text-black text-pretty shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_16px_50px_rgba(16,185,129,0.18)] transition duration-300 ease-out [text-wrap:balance] hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_0_1px_rgba(16,185,129,0.45),0_22px_55px_rgba(16,185,129,0.22)] active:translate-y-0 sm:min-h-12 sm:w-auto sm:min-w-[12.5rem] sm:px-6 sm:leading-normal"
@@ -126,7 +126,10 @@ export default function Home() {
               </div>
               </div>
 
-              <div id="servicii" className="scroll-anchor mt-10 w-full max-w-xl sm:mt-11">
+              <div
+                id="servicii"
+                className="scroll-anchor mt-10 w-full max-w-xl max-sm:mt-[4.75rem] sm:mt-11"
+              >
                 <div
                   className={`${inter.className} mt-6 text-left text-base font-normal leading-7 text-zinc-100 sm:text-lg`}
                 >
