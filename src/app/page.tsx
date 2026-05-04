@@ -46,7 +46,7 @@ export default function Home() {
                     alt="NEXTERAWEB logo"
                     width={224}
                     height={224}
-                    className="h-[7.5rem] w-[7.5rem] shrink-0 rounded-full ring-1 ring-white/15 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_20px_50px_rgba(0,0,0,0.5),0_0_72px_rgba(16,185,129,0.12)] min-[400px]:h-[8.25rem] min-[400px]:w-[8.25rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
+                    className="h-[7.5rem] w-[7.5rem] shrink-0 rounded-full drop-shadow-[0_14px_32px_rgba(0,0,0,0.55)] drop-shadow-[0_0_52px_rgba(45,211,153,0.16)] min-[400px]:h-[8.25rem] min-[400px]:w-[8.25rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
                     priority
                   />
                   <div
