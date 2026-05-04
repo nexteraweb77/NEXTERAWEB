@@ -38,9 +38,9 @@ export default function Home() {
 
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-12 min-[430px]:px-5 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-14 lg:pb-5 lg:pt-20">
             <Reveal className="relative" instant>
-              <div className="-translate-y-2.5">
-              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-8 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:gap-y-6 lg:text-left">
-                <div className="flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-4 sm:max-w-sm sm:gap-3.5 lg:w-auto lg:max-w-[15rem] lg:items-start lg:gap-4">
+              <div className="translate-y-0 sm:-translate-y-2.5">
+              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-9 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:gap-y-6 lg:text-left">
+                <div className="relative z-10 flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-4 max-sm:pb-2 sm:max-w-sm sm:gap-3.5 lg:w-auto lg:max-w-[15rem] lg:items-start lg:gap-4">
                   <Image
                     src="/logo.png"
                     alt="NEXTERAWEB logo"
@@ -56,7 +56,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="relative flex w-full max-w-[min(100%,22rem)] flex-col items-center gap-3.5 min-[400px]:max-w-[min(100%,24rem)] min-[430px]:max-w-[min(100%,26rem)] sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
+                <div className="relative z-0 flex w-full max-w-[min(100%,22rem)] flex-col items-center gap-3.5 max-sm:mt-2 min-[400px]:max-w-[min(100%,24rem)] min-[430px]:max-w-[min(100%,26rem)] sm:mt-0 sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
                   <p
                     className={`${inter.className} text-pretty text-balance text-[clamp(1.12rem,3.75vw,1.48rem)] font-semibold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.16rem,3.5vw,1.52rem)] min-[430px]:text-[1.22rem] min-[430px]:leading-snug sm:text-xl sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:leading-relaxed lg:text-zinc-100/95`}
                   >
