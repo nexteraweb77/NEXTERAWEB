@@ -36,8 +36,9 @@ export default function Home() {
             />
           </ScrollParallaxLayer>
 
-          <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-14 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-16 lg:pb-5 lg:pt-24">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-12 min-[430px]:px-5 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-14 lg:pb-5 lg:pt-20">
             <Reveal className="relative" instant>
+              <div className="-translate-y-2.5">
               <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-6 text-center max-[360px]:px-0.5 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:gap-y-6 lg:text-left">
                 <div className="flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-3 sm:max-w-sm sm:gap-3.5 lg:w-auto lg:max-w-[15rem] lg:items-start lg:gap-4">
                   <Image
@@ -49,15 +50,15 @@ export default function Home() {
                     priority
                   />
                   <div
-                    className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.1rem,4.2vw,1.75rem)] font-semibold uppercase tracking-[0.08em] text-white min-[400px]:tracking-[0.12em] sm:text-[clamp(1.35rem,3.2vw,1.95rem)] sm:tracking-[0.14em] lg:text-left lg:text-2xl lg:leading-tight lg:tracking-[0.18em] xl:text-[1.75rem]`}
+                    className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.18rem,4.2vw,1.88rem)] font-semibold uppercase tracking-[0.08em] text-white min-[400px]:tracking-[0.12em] sm:text-[clamp(1.42rem,3.2vw,2.08rem)] sm:tracking-[0.14em] lg:text-left lg:text-[1.7rem] lg:leading-tight lg:tracking-[0.18em] xl:text-[1.9rem]`}
                   >
                     NEXTERAWEB
                   </div>
                 </div>
 
-                <div className="relative flex w-full max-w-[min(100%,22rem)] flex-col items-center gap-3.5 min-[400px]:max-w-[min(100%,24rem)] sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
+                <div className="relative flex w-full max-w-[min(100%,22rem)] flex-col items-center gap-3.5 min-[400px]:max-w-[min(100%,24rem)] min-[430px]:max-w-[min(100%,26rem)] sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
                   <p
-                    className={`${inter.className} text-pretty text-balance text-[clamp(1.08rem,3.6vw,1.38rem)] font-medium leading-snug tracking-[-0.02em] text-zinc-200 sm:text-xl sm:leading-snug md:text-2xl md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.2rem] lg:leading-relaxed lg:text-zinc-300/95`}
+                    className={`${inter.className} text-pretty text-balance text-[clamp(1.12rem,3.75vw,1.48rem)] font-semibold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.16rem,3.5vw,1.52rem)] min-[430px]:text-[1.22rem] min-[430px]:leading-snug sm:text-xl sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:leading-relaxed lg:text-zinc-100/95`}
                   >
                     Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de
                     internet
@@ -67,7 +68,7 @@ export default function Home() {
                     aria-hidden
                   />
                   <h1
-                    className={`${montserrat.className} text-pretty text-balance text-[1.5rem] font-semibold leading-[1.2] tracking-[-0.02em] text-white sm:text-[1.65rem] sm:leading-snug md:text-3xl md:leading-tight lg:max-w-xl lg:text-left lg:text-[clamp(1.65rem,2.1vw,2.15rem)] lg:leading-[1.18] lg:tracking-[-0.03em]`}
+                    className={`${montserrat.className} text-pretty text-balance text-[clamp(1.42rem,4.1vw,1.72rem)] font-light leading-[1.22] tracking-[-0.012em] text-white min-[430px]:text-[clamp(1.5rem,3.6vw,1.82rem)] min-[430px]:leading-snug sm:text-[clamp(1.55rem,3.2vw,1.88rem)] sm:leading-snug md:text-[clamp(1.75rem,2.6vw,2.05rem)] md:leading-tight lg:max-w-xl lg:text-left lg:text-[clamp(1.58rem,2.1vw,2.08rem)] lg:leading-[1.2] lg:tracking-[-0.02em]`}
                   >
                     Construiesc experiențe digitale care inspiră încredere și
                     generează rezultate
@@ -123,8 +124,9 @@ export default function Home() {
                   Instagram
                 </a>
               </div>
+              </div>
 
-              <div id="servicii" className="scroll-anchor mt-12 w-full max-w-xl">
+              <div id="servicii" className="scroll-anchor mt-10 w-full max-w-xl sm:mt-11">
                 <div
                   className={`${inter.className} mt-6 text-left text-base font-normal leading-7 text-zinc-100 sm:text-lg`}
                 >
