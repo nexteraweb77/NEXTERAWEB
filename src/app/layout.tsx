@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
 import { Navbar } from "@/components/Navbar";
 import { SiteProviders } from "@/components/SiteProviders";
 import { getMetadataBase, getSiteUrl } from "@/lib/site-url";
@@ -51,10 +52,10 @@ export const metadata: Metadata = {
     siteName,
     images: [
       {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: `${siteName} — logo`,
+        url: "/og.png",
+        width: 576,
+        height: 576,
+        alt: `${siteName} — identitate vizuală`,
       },
     ],
   },
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description: siteDescription,
-    images: ["/logo.png"],
+    images: ["/og.png"],
   },
   icons: {
     icon: [{ url: "/logo.png", type: "image/png" }],
@@ -91,6 +92,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <body className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-hidden bg-black text-zinc-100 antialiased">
+        <OrganizationJsonLd />
         <SiteProviders>
           <Navbar />
           {children}
