@@ -39,12 +39,21 @@ export default function AsigurareDigitalaPage() {
           </h1>
 
           <div className="glass-panel-strong mt-10 border-white/10 p-6 text-sm leading-8 text-zinc-200 sm:p-8 sm:text-base">
-            <p>
-              Un site este ca o mașină: dacă nu îi schimbi uleiul și nu îi faci
-              revizia, la un moment dat te lasă în drum. Eu îți ofer
-              &apos;Asigurarea Digitală&apos; – tu te ocupi de afacere, iar eu mă
-              asigur că magazinul tău online este mereu deschis, securizat și
-              gata să primească clienți, fără ca tu să atingi vreun buton tehnic
+            <p className="text-base font-semibold leading-snug text-zinc-100 sm:text-lg sm:leading-snug">
+              Majoritatea antreprenorilor pierd timp prețios luptându-se cu erori
+              tehnice, hosting expirat sau actualizări care strică site-ul
+            </p>
+            <p className="mt-5 text-pretty">
+              Eu îți propun modelul{" "}
+              <span className="bg-gradient-to-r from-emerald-300/95 via-teal-200 to-emerald-400/85 bg-clip-text font-semibold text-transparent">
+                Zero bătăi de cap!
+              </span>{" "}
+              Mă ocup personal de absolut tot – de la proiect, rezervarea
+              domeniului și găzduire ultra-rapidă, până la securitate și
+              mentenanță zilnică. Tu plătești un singur abonament lunar și
+              primești la schimb certitudinea că magazinul tău este mereu online,
+              securizat și gata de vânzare — fără butoane tehnice pentru tine.
+              Doar rezultate. Tu conduci afacerea, eu conduc tehnologia
             </p>
           </div>
 
