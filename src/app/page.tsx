@@ -855,9 +855,10 @@ export default function Home() {
                       >
                         Muzica m-a învățat ritmul, iar mecatronica m-a învățat
                         precizia. Pentru mine, un site premium este un mecanism fin,
-                        unde tehnologia întâlnește arta.Totul începe cu un vers sau un
-                        pixel așezat exact unde îi este locul. Așa cum un robot
-                        industrial execută fiecare mișcare fără eroare, eu îți
+                        unde tehnologia întâlnește arta. Totul începe cu un gând, un
+                        vers, un pixel sau un cod, așezat exact unde îi este locul. Așa
+                        cum un robot industrial execută fiecare mișcare fără eroare, eu
+                        îți
                         construiesc site-ul cu o logică impecabilă, unde codul și
                         designul lucrează în sincron. Rezultatul? O prezență online care
                         funcționează ceas, vibrează și inspiră încredere de la primul
