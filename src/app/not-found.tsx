@@ -14,7 +14,7 @@ const inter = Inter({
 
 export default function NotFound() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black text-zinc-100">
+    <div className="relative min-h-screen overflow-x-clip bg-black text-zinc-100">
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden

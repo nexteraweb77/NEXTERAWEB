@@ -35,7 +35,7 @@ export default function CumLucramPage() {
 
   return (
     <div className="min-h-screen bg-black text-zinc-100">
-      <main className="relative min-h-screen overflow-x-hidden pt-[calc(4rem+env(safe-area-inset-top,0px))]">
+      <main className="relative min-h-screen overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))]">
         <ScrollParallaxLayer
           className="pointer-events-none absolute inset-0"
           multiplier={0.034}

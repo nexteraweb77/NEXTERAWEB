@@ -28,8 +28,8 @@ export default function Home() {
             className="pointer-events-none absolute inset-0"
             multiplier={0.038}
           >
-            <div className="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-500/[0.14] blur-[100px]" />
-            <div className="absolute -bottom-56 -left-56 h-[min(100vw,640px)] w-[min(100vw,640px)] max-w-[140%] rounded-full bg-teal-400/[0.065] blur-[120px] sm:-bottom-64 sm:-left-64" />
+            <div className="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/[0.22] blur-[100px]" />
+            <div className="absolute -bottom-56 -left-56 h-[min(100vw,640px)] w-[min(100vw,640px)] max-w-[140%] rounded-full bg-emerald-300/[0.11] blur-[120px] sm:-bottom-64 sm:-left-64" />
             <div
               className="absolute inset-x-0 bottom-0 h-[min(48vh,420px)] bg-gradient-to-t from-black/70 via-black/20 to-transparent"
               aria-hidden
@@ -37,26 +37,42 @@ export default function Home() {
           </ScrollParallaxLayer>
 
           <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-14 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-16 lg:pb-5 lg:pt-24">
-            <Reveal className="relative">
-              <div className="flex flex-col items-center gap-4 text-center sm:gap-6">
-                <div className="flex w-full max-w-sm flex-col items-center gap-3 sm:max-w-none sm:gap-3.5">
+            <Reveal className="relative" instant>
+              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-6 text-center max-[360px]:px-0.5 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-x-12 lg:gap-y-6 lg:text-left">
+                <div className="flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-3 sm:max-w-sm sm:gap-3.5 lg:w-auto lg:max-w-[15rem] lg:items-start lg:gap-4">
                   <Image
                     src="/logo.png"
                     alt="NEXTERAWEB logo"
-                    width={160}
-                    height={160}
-                    className="h-28 w-28 shrink-0 rounded-full ring-1 ring-white/15 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_20px_50px_rgba(0,0,0,0.5),0_0_64px_rgba(16,185,129,0.07)] sm:h-32 sm:w-32 lg:h-36 lg:w-36"
+                    width={224}
+                    height={224}
+                    className="h-[7.5rem] w-[7.5rem] shrink-0 rounded-full ring-1 ring-white/15 shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_20px_50px_rgba(0,0,0,0.5),0_0_72px_rgba(16,185,129,0.12)] min-[400px]:h-[8.25rem] min-[400px]:w-[8.25rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
                     priority
                   />
-                  <div className="w-full text-center text-[clamp(1.15rem,4.2vw,1.45rem)] font-semibold tracking-[0.14em] text-white sm:text-3xl sm:tracking-[0.2em] lg:text-4xl lg:tracking-[0.22em]">
+                  <div
+                    className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.1rem,4.2vw,1.75rem)] font-semibold uppercase tracking-[0.08em] text-white min-[400px]:tracking-[0.12em] sm:text-[clamp(1.35rem,3.2vw,1.95rem)] sm:tracking-[0.14em] lg:text-left lg:text-2xl lg:leading-tight lg:tracking-[0.18em] xl:text-[1.75rem]`}
+                  >
                     NEXTERAWEB
                   </div>
                 </div>
 
-                <h1 className="text-balance px-0 text-[1.625rem] font-medium leading-[1.2] tracking-tight text-white sm:px-0 sm:text-4xl sm:leading-tight md:text-5xl">
-                  Construiesc experiențe digitale care inspiră încredere și
-                  generează rezultate
-                </h1>
+                <div className="relative flex w-full max-w-[min(100%,22rem)] flex-col items-center gap-3.5 min-[400px]:max-w-[min(100%,24rem)] sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
+                  <p
+                    className={`${inter.className} text-pretty text-balance text-[clamp(1.08rem,3.6vw,1.38rem)] font-medium leading-snug tracking-[-0.02em] text-zinc-200 sm:text-xl sm:leading-snug md:text-2xl md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.2rem] lg:leading-relaxed lg:text-zinc-300/95`}
+                  >
+                    Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de
+                    internet
+                  </p>
+                  <span
+                    className="block h-px w-12 shrink-0 rounded-full bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent sm:w-14 lg:hidden"
+                    aria-hidden
+                  />
+                  <h1
+                    className={`${montserrat.className} text-pretty text-balance text-[1.5rem] font-semibold leading-[1.2] tracking-[-0.02em] text-white sm:text-[1.65rem] sm:leading-snug md:text-3xl md:leading-tight lg:max-w-xl lg:text-left lg:text-[clamp(1.65rem,2.1vw,2.15rem)] lg:leading-[1.18] lg:tracking-[-0.03em]`}
+                  >
+                    Construiesc experiențe digitale care inspiră încredere și
+                    generează rezultate
+                  </h1>
+                </div>
               </div>
               <p className="mx-auto mt-4 max-w-xl text-pretty text-center text-base leading-7 text-zinc-300 sm:mt-5 sm:text-lg sm:leading-8">
                 Design exclusivist, adaptat impecabil pe orice ecran. Strategie
@@ -71,9 +87,9 @@ export default function Home() {
               <div className="mx-auto mt-6 flex w-full max-w-xl flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3">
                 <a
                   href="#contact"
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-emerald-500/90 px-6 text-sm font-semibold text-black shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_16px_50px_rgba(16,185,129,0.18)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_0_1px_rgba(16,185,129,0.45),0_22px_55px_rgba(16,185,129,0.22)] active:translate-y-0 sm:w-auto sm:min-w-[11rem]"
+                  className="inline-flex min-h-14 w-full max-w-full items-center justify-center rounded-full bg-emerald-500/90 px-4 py-2.5 text-center text-sm font-semibold leading-snug text-black text-pretty shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_16px_50px_rgba(16,185,129,0.18)] transition duration-300 ease-out [text-wrap:balance] hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_0_1px_rgba(16,185,129,0.45),0_22px_55px_rgba(16,185,129,0.22)] active:translate-y-0 sm:min-h-12 sm:w-auto sm:min-w-[12.5rem] sm:px-6 sm:leading-normal"
                 >
-                  Consultanță gratuită
+                  Vreau mai mulți clienți
                 </a>
                 <a
                   href="#portofoliu"
@@ -85,8 +101,17 @@ export default function Home() {
                   href={WHATSAPP_CHAT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#25D366] px-6 text-sm font-semibold text-black shadow-[0_0_0_1px_rgba(37,211,102,0.45),0_16px_50px_rgba(37,211,102,0.18)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#1ebe57] hover:shadow-[0_0_0_1px_rgba(37,211,102,0.55),0_22px_55px_rgba(37,211,102,0.22)] active:translate-y-0 sm:w-auto sm:min-w-[11rem]"
+                  aria-label="WhatsApp"
+                  className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 text-sm font-semibold text-black shadow-[0_0_0_1px_rgba(37,211,102,0.45),0_16px_50px_rgba(37,211,102,0.18)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#1ebe57] hover:shadow-[0_0_0_1px_rgba(37,211,102,0.55),0_22px_55px_rgba(37,211,102,0.22)] active:translate-y-0 sm:w-auto sm:min-w-[11rem]"
                 >
+                  <svg
+                    className="h-4 w-4 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
                   WhatsApp
                 </a>
                 <a
@@ -579,7 +604,7 @@ export default function Home() {
 
             <div className="mt-6 grid grid-cols-1 gap-5 sm:mt-7 lg:grid-cols-2">
               <Reveal>
-                <details className="group glass-panel border-white/10 p-6 transition hover:border-white/20">
+                <details className="group glass-panel !border-amber-300/35 p-6 transition hover:!border-amber-200/50">
                   <summary className="list-none cursor-pointer select-none">
                     <div className="flex items-start justify-between gap-4">
                       <div className="min-w-0 flex-1 pr-2">
@@ -766,7 +791,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <details className="group/despre border-t border-white/[0.08]" open>
+                <details className="group/despre border-t border-white/[0.08]">
                   <summary className="list-none cursor-pointer select-none px-5 py-6 transition-colors hover:bg-gradient-to-r hover:from-white/[0.04] hover:via-transparent hover:to-emerald-500/[0.03] sm:px-10 sm:py-7 lg:px-12 [&::-webkit-details-marker]:hidden">
                     <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
                       <div className="relative max-w-[min(100%,34rem)] border-l border-emerald-400/30 pl-4 text-left sm:pl-5">
@@ -943,17 +968,18 @@ export default function Home() {
                       href={WHATSAPP_CHAT_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-500/90 px-7 text-sm font-semibold text-black shadow-[0_0_0_1px_rgba(16,185,129,0.4),0_12px_40px_rgba(16,185,129,0.2)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_0_1px_rgba(16,185,129,0.5),0_16px_48px_rgba(16,185,129,0.25)] active:translate-y-0 lg:w-auto lg:min-w-[16.5rem]"
+                      aria-label="Programează o discuție pe WhatsApp"
+                      className="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-500/90 px-6 text-sm font-semibold text-black text-pretty shadow-[0_0_0_1px_rgba(16,185,129,0.4),0_12px_40px_rgba(16,185,129,0.2)] transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_0_1px_rgba(16,185,129,0.5),0_16px_48px_rgba(16,185,129,0.25)] active:translate-y-0 lg:w-auto lg:min-w-[14.5rem]"
                     >
                       <svg
-                        className="h-4 w-4"
+                        className="h-4 w-4 shrink-0"
                         viewBox="0 0 24 24"
                         fill="currentColor"
                         aria-hidden
                       >
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                       </svg>
-                      Scrie-mi pe WhatsApp
+                      Programează o discuție
                     </a>
                   </div>
                 </div>

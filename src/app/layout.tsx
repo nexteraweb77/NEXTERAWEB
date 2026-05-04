@@ -91,7 +91,7 @@ export default function RootLayout({
       lang="ro"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
-      <body className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-hidden bg-black text-zinc-100 antialiased">
+      <body className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-clip bg-black text-zinc-100 antialiased">
         <OrganizationJsonLd />
         <SiteProviders>
           <Navbar />

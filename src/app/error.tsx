@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Error({
@@ -33,12 +34,12 @@ export default function Error({
         >
           Reîncearcă
         </button>
-        <a
+        <Link
           href="/"
           className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] px-6 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
         >
           Acasă
-        </a>
+        </Link>
       </div>
       {process.env.NODE_ENV === "development" && error?.message ? (
         <pre className="mt-10 max-h-40 max-w-full overflow-auto rounded-xl border border-white/10 bg-black/60 p-4 text-left text-xs text-zinc-500">

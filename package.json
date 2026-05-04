@@ -6,7 +6,7 @@
     "postinstall": "node scripts/patch-next-network-host.cjs",
     "dev": "node scripts/patch-next-network-host.cjs && next dev -H 127.0.0.1",
     "build": "next build",
-    "start": "node scripts/patch-next-network-host.cjs && next start -H 0.0.0.0",
+    "start": "node scripts/start-production.cjs",
     "lint": "eslint"
   },
   "dependencies": {

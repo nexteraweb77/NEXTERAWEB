@@ -1,10 +1,29 @@
 import { ScrollParallaxLayer } from "@/components/ScrollParallaxLayer";
 import Link from "next/link";
 
+const NEXTERA_WA = "40753834965";
+
+function waBuyUrl(message: string) {
+  return `https://wa.me/${NEXTERA_WA}?text=${encodeURIComponent(message)}`;
+}
+
+const BUY_PROTECT_URL = waBuyUrl(
+  "Bună! Vreau să activez pachetul PROTECT — Asigurare Digitală (30€/lună). Aș dori să discutăm pașii pentru plată și activare.",
+);
+const BUY_GROWTH_URL = waBuyUrl(
+  "Bună! Vreau să activez pachetul GROWTH — Asigurare Digitală (50€/lună). Aș dori să discutăm pașii pentru plată și activare.",
+);
+const BUY_PARTNER_URL = waBuyUrl(
+  "Bună! Vreau să activez pachetul PARTNER — Asigurare Digitală (80€/lună). Aș dori să discutăm pașii pentru plată și activare.",
+);
+
+const buyBtnClass =
+  "inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-amber-300/40 bg-gradient-to-r from-amber-500/30 to-yellow-600/20 px-6 text-sm font-semibold text-amber-50 shadow-[0_0_0_1px_rgba(251,191,36,0.22),0_8px_28px_rgba(245,158,11,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-amber-200/55 hover:from-amber-400/40 hover:shadow-[0_0_0_1px_rgba(253,224,71,0.3),0_12px_36px_rgba(245,158,11,0.2)] active:translate-y-0";
+
 export default function AsigurareDigitalaPage() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
-      <main className="relative min-h-screen overflow-x-hidden pt-[calc(4rem+env(safe-area-inset-top,0px))]">
+      <main className="relative min-h-screen overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))]">
         <ScrollParallaxLayer
           className="pointer-events-none absolute inset-0"
           multiplier={0.034}
@@ -35,7 +54,7 @@ export default function AsigurareDigitalaPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold leading-snug sm:text-base">
                     <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-400 bg-clip-text text-transparent">
-                      Pachetul PROTECT – 20€ / lună
+                      Pachetul PROTECT – 30€ / lună
                     </span>{" "}
                     <span className="font-medium text-zinc-200">
                       Esențial pentru siguranța ta
@@ -49,20 +68,33 @@ export default function AsigurareDigitalaPage() {
                   </div>
                 </div>
               </summary>
-              <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
-                <div>
-                  Backup săptămânal: Dacă ceva se strică, revenim online imediat
+              <div>
+                <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
+                  <div>
+                    Backup săptămânal: Dacă ceva se strică, revenim online imediat
+                  </div>
+                  <div>
+                    Securitate activă: Monitorizare împotriva hackerilor și
+                    virușilor
+                  </div>
+                  <div>
+                    Actualizări de conținut: Modificări rapide de poze sau texte
+                    (până la 2 intervenții/lună)
+                  </div>
+                  <div>
+                    Liniște sufletească: Știi că site-ul e online și protejat
+                  </div>
                 </div>
-                <div>
-                  Securitate activă: Monitorizare împotriva hackerilor și
-                  virușilor
-                </div>
-                <div>
-                  Actualizări de conținut: Modificări rapide de poze sau texte
-                  (până la 2 intervenții/lună)
-                </div>
-                <div>
-                  Liniște sufletească: Știi că site-ul e online și protejat
+                <div className="mt-6 flex justify-end border-t border-white/10 pt-4">
+                  <a
+                    href={BUY_PROTECT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buyBtnClass}
+                    aria-label="Cumpără pachetul PROTECT — deschide WhatsApp"
+                  >
+                    Cumpără
+                  </a>
                 </div>
               </div>
             </details>
@@ -72,7 +104,7 @@ export default function AsigurareDigitalaPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold leading-snug sm:text-base">
                     <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-400 bg-clip-text text-transparent">
-                      Pachetul GROWTH – 40€ / lună
+                      Pachetul GROWTH – 50€ / lună
                     </span>{" "}
                     <span className="font-medium text-zinc-200">
                       Pentru afaceri care vor să crească constant
@@ -86,18 +118,31 @@ export default function AsigurareDigitalaPage() {
                   </div>
                 </div>
               </summary>
-              <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
-                <div>Tot ce include PROTECT</div>
-                <div>
-                  Update-uri tehnice lunare: Totul rămâne modern și rapid
+              <div>
+                <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
+                  <div>Tot ce include PROTECT</div>
+                  <div>
+                    Update-uri tehnice lunare: Totul rămâne modern și rapid
+                  </div>
+                  <div>
+                    Modificări nelimitate (mici): Schimbăm prețuri, adăugăm oferte
+                    sau poze noi oricând ai nevoie
+                  </div>
+                  <div>
+                    Verificare performanță: Monitorizez viteza de încărcare ca să
+                    nu pierzi clienți
+                  </div>
                 </div>
-                <div>
-                  Modificări nelimitate (mici): Schimbăm prețuri, adăugăm oferte
-                  sau poze noi oricând ai nevoie
-                </div>
-                <div>
-                  Verificare performanță: Monitorizez viteza de încărcare ca să nu
-                  pierzi clienți
+                <div className="mt-6 flex justify-end border-t border-white/10 pt-4">
+                  <a
+                    href={BUY_GROWTH_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buyBtnClass}
+                    aria-label="Cumpără pachetul GROWTH — deschide WhatsApp"
+                  >
+                    Cumpără
+                  </a>
                 </div>
               </div>
             </details>
@@ -107,7 +152,7 @@ export default function AsigurareDigitalaPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold leading-snug sm:text-base">
                     <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-400 bg-clip-text text-transparent">
-                      Pachetul PARTNER – 60€ / lună
+                      Pachetul PARTNER – 80€ / lună
                     </span>{" "}
                     <span className="font-medium text-zinc-200">
                       Echipa ta tehnică la un mesaj distanță
@@ -121,19 +166,32 @@ export default function AsigurareDigitalaPage() {
                   </div>
                 </div>
               </summary>
-              <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
-                <div>Tot ce include GROWTH</div>
-                <div>
-                  Suport Prioritar (VIP): Rezolv cererile tale în maxim 24–48 de
-                  ore
+              <div>
+                <div className="mt-5 space-y-3 text-sm leading-7 text-zinc-300">
+                  <div>Tot ce include GROWTH</div>
+                  <div>
+                    Suport Prioritar (VIP): Rezolv cererile tale în maxim 24–48 de
+                    ore
+                  </div>
+                  <div>
+                    Îmbunătățiri constante: Adăugăm funcții noi, butoane sau
+                    secțiuni pe măsură ce afacerea ta evoluează
+                  </div>
+                  <div>
+                    Raport de sănătate: Îți spun lunar cum stă site-ul și ce mai
+                    putem optimiza
+                  </div>
                 </div>
-                <div>
-                  Îmbunătățiri constante: Adăugăm funcții noi, butoane sau secțiuni
-                  pe măsură ce afacerea ta evoluează
-                </div>
-                <div>
-                  Raport de sănătate: Îți spun lunar cum stă site-ul și ce mai
-                  putem optimiza
+                <div className="mt-6 flex justify-end border-t border-white/10 pt-4">
+                  <a
+                    href={BUY_PARTNER_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={buyBtnClass}
+                    aria-label="Cumpără pachetul PARTNER — deschide WhatsApp"
+                  >
+                    Cumpără
+                  </a>
                 </div>
               </div>
             </details>
