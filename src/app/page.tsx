@@ -70,8 +70,8 @@ export default function Home() {
                   <h1
                     className={`${montserrat.className} text-pretty text-balance text-[clamp(1.42rem,4.1vw,1.72rem)] font-light leading-[1.22] tracking-[-0.012em] text-white min-[430px]:text-[clamp(1.5rem,3.6vw,1.82rem)] min-[430px]:leading-snug sm:text-[clamp(1.55rem,3.2vw,1.88rem)] sm:leading-snug md:text-[clamp(1.75rem,2.6vw,2.05rem)] md:leading-tight lg:max-w-xl lg:text-left lg:text-[clamp(1.58rem,2.1vw,2.08rem)] lg:leading-[1.2] lg:tracking-[-0.02em]`}
                   >
-                    Construiesc experiențe digitale care inspiră încredere și
-                    generează rezultate
+                    Construiesc cărți de vizită digitale care emană autoritate și
+                    stil
                   </h1>
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function Home() {
                     [
                       {
                         title: "💻 Site-uri de prezentare moderne",
-                        lead: "Construiesc cărți de vizită digitale care emană autoritate și stil",
+                        lead: "Construiesc experiențe digitale care inspiră încredere și generează rezultate",
                         bullets: [
                           "✔️ Design profesional și responsive",
                           "✔️ Optimizate pentru mobil și viteză",
