@@ -67,7 +67,7 @@ export default function PortofoliuPage() {
               Portofoliu
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-300 sm:leading-7">
-              O selecție de site-uri livrate pe Netlify — evenimente, fitness,
+              O selecție de site-uri livrate — evenimente, fitness,
               service auto, beauty și cabinet de avocatură. Poți deschide
               fiecare proiect într-o filă nouă ca să vezi structura, viteza și
               experiența completă

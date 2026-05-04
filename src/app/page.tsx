@@ -12,7 +12,7 @@ const inter = Inter({
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const WHATSAPP_CHAT_URL = `https://wa.me/40753834965?text=${encodeURIComponent(
@@ -50,7 +50,7 @@ export default function Home() {
                     priority
                   />
                   <div
-                    className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.18rem,4.2vw,1.88rem)] font-semibold uppercase tracking-[0.08em] text-white min-[400px]:tracking-[0.12em] sm:text-[clamp(1.42rem,3.2vw,2.08rem)] sm:tracking-[0.14em] lg:text-left lg:text-[1.7rem] lg:leading-tight lg:tracking-[0.18em] xl:text-[1.9rem]`}
+                    className={`tagline-neon-shimmer ${montserrat.className} w-full text-balance text-center leading-none text-[clamp(1.34rem,4.85vw,2.18rem)] font-bold uppercase tracking-[0.08em] min-[400px]:tracking-[0.12em] sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
                     NEXTERAWEB
                   </div>

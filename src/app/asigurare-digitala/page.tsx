@@ -53,7 +53,10 @@ export default function AsigurareDigitalaPage() {
               mentenanță zilnică. Tu plătești un singur abonament lunar și
               primești la schimb certitudinea că magazinul tău este mereu online,
               securizat și gata de vânzare — fără butoane tehnice pentru tine.
-              Doar rezultate. Tu conduci afacerea, eu conduc tehnologia
+              Doar rezultate. Tu conduci afacerea, eu conduc tehnologia.
+            </p>
+            <p className="mt-4 text-base font-medium leading-snug tracking-[0.04em] text-white sm:text-lg">
+              Soluții digitale croite pe măsură
             </p>
           </div>
 
