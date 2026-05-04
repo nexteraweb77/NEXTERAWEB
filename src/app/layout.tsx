@@ -17,10 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 const siteDescription =
-  "Viziune transformată în experiențe digitale memorabile: design luxury, SEO și strategie pentru branduri care aleg performanță, claritate și ritm de creștere.";
+  "Web design și site-uri moderne în Brașov, România — viziune transformată în experiențe digitale memorabile: design luxury, SEO și strategie pentru branduri care aleg performanță, claritate și ritm de creștere.";
 
 const siteName = "NEXTERAWEB";
-const defaultTitle = "Web Designer | Creez Site-uri Moderne pentru Afaceri Locale";
+const defaultTitle =
+  "Web Designer Brașov | Creez Site-uri Moderne pentru Afaceri Locale";
 
 const canonicalRoot = new URL("/", getMetadataBase()).href;
 
@@ -34,6 +35,9 @@ export const metadata: Metadata = {
   applicationName: siteName,
   keywords: [
     "web design România",
+    "web design Brașov",
+    "creare site Brașov",
+    "site web Brașov",
     "site web afaceri locale",
     "site modern",
     "Next.js",

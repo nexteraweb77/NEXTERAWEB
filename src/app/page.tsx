@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div id="top" className="min-h-screen bg-black text-zinc-100">
       <main className="pt-[calc(4rem+env(safe-area-inset-top,0px))]">
-        <section className="relative overflow-x-clip overflow-y-visible pb-10 max-sm:pb-8 sm:pb-16 lg:pb-20">
+        <section className="relative overflow-x-clip overflow-y-visible pb-10 max-sm:pb-10 sm:pb-16 lg:pb-20">
           <ScrollParallaxLayer
             className="pointer-events-none absolute inset-0"
             multiplier={0.038}
@@ -36,17 +36,17 @@ export default function Home() {
             />
           </ScrollParallaxLayer>
 
-          <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-10 max-sm:pt-9 min-[430px]:px-5 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-14 lg:pb-5 lg:pt-20">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-3 pb-4 pt-10 max-sm:pt-7 min-[430px]:px-5 sm:gap-10 sm:px-6 sm:pb-5 sm:pt-14 lg:pb-5 lg:pt-20">
             <Reveal className="relative" instant>
-              <div className="max-sm:-translate-y-1 translate-y-0 sm:translate-y-0 sm:-translate-y-2.5">
-              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-7 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:items-start lg:gap-x-14 lg:gap-y-6 lg:text-left xl:gap-x-16">
-                <div className="relative z-10 flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-4 max-sm:pb-2 sm:max-w-sm sm:gap-3.5 lg:w-full lg:max-w-full lg:min-w-0 lg:items-start lg:gap-4">
+              <div className="max-sm:-translate-y-2 translate-y-0 sm:translate-y-0 sm:-translate-y-2.5">
+              <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-5 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:items-start lg:gap-x-14 lg:gap-y-6 lg:text-left xl:gap-x-16">
+                <div className="relative z-10 flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-3 max-sm:pb-0 sm:max-w-sm sm:gap-3.5 lg:w-full lg:max-w-full lg:min-w-0 lg:items-start lg:gap-4">
                   <Image
                     src="/logo.png"
                     alt="NEXTERAWEB logo"
                     width={224}
                     height={224}
-                    className="h-[7.5rem] w-[7.5rem] shrink-0 rounded-full drop-shadow-[0_14px_32px_rgba(0,0,0,0.55)] drop-shadow-[0_0_52px_rgba(45,211,153,0.16)] min-[400px]:h-[8.25rem] min-[400px]:w-[8.25rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
+                    className="h-[6.75rem] w-[6.75rem] shrink-0 rounded-full drop-shadow-[0_14px_32px_rgba(0,0,0,0.55)] drop-shadow-[0_0_52px_rgba(45,211,153,0.16)] min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
                     priority
                   />
                   <div
@@ -56,9 +56,9 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="relative z-0 flex w-full min-w-0 max-w-[min(100%,22rem)] flex-col items-center gap-3 max-sm:mt-1 min-[400px]:max-w-[min(100%,24rem)] min-[430px]:max-w-[min(100%,26rem)] sm:mt-0 sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
+                <div className="relative z-0 flex w-full min-w-0 max-w-[min(100%,22rem)] flex-col items-center gap-2.5 max-sm:mt-0 min-[400px]:max-w-[min(100%,24rem)] min-[430px]:max-w-[min(100%,26rem)] sm:mt-0 sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
                   <p
-                    className={`${inter.className} text-pretty text-balance text-[clamp(1.12rem,3.75vw,1.48rem)] font-semibold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.16rem,3.5vw,1.52rem)] min-[430px]:text-[1.22rem] min-[430px]:leading-snug sm:text-xl sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:leading-relaxed lg:text-zinc-100/95`}
+                    className={`${inter.className} text-pretty text-balance text-[clamp(1.22rem,4.1vw,1.58rem)] font-bold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.24rem,3.85vw,1.62rem)] min-[430px]:text-[1.32rem] min-[430px]:leading-snug sm:text-xl sm:font-semibold sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:font-semibold lg:leading-relaxed lg:text-zinc-100/95`}
                   >
                     Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de
                     internet
@@ -75,7 +75,7 @@ export default function Home() {
                   </h1>
                 </div>
               </div>
-              <p className="mx-auto mt-3 max-w-xl text-pretty text-center text-base leading-7 text-zinc-300 max-sm:leading-snug sm:mt-5 sm:text-lg sm:leading-8">
+              <p className="mx-auto mt-2 max-w-xl text-pretty text-center text-base leading-7 text-zinc-300 max-sm:mt-2 max-sm:leading-snug sm:mt-5 sm:text-lg sm:leading-8">
                 Design exclusivist, adaptat impecabil pe orice ecran. Strategie
                 pură și execuție de top,{" "}
                 <span className="text-emerald-300/85">lucrezi direct cu mine</span>
@@ -85,7 +85,7 @@ export default function Home() {
                   fără intermediari, fără bătăi de cap
                 </span>
               </p>
-              <div className="mx-auto mt-5 flex w-full max-w-xl flex-col gap-2.5 pb-[max(0.5rem,env(safe-area-inset-bottom,0px))] max-sm:mt-6 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3 sm:pb-0">
+              <div className="mx-auto mt-4 flex w-full max-w-xl flex-col gap-2.5 pb-[max(1rem,env(safe-area-inset-bottom,0px))] max-sm:mt-4 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-3 sm:pb-0">
                 <a
                   href="#contact"
                   className="inline-flex min-h-12 w-full max-w-full items-center justify-center rounded-full bg-emerald-500/90 px-4 py-2.5 text-center text-sm font-semibold leading-snug text-black text-pretty shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_16px_50px_rgba(16,185,129,0.18)] transition duration-300 ease-out [text-wrap:balance] hover:-translate-y-0.5 hover:bg-emerald-400 hover:shadow-[0_0_0_1px_rgba(16,185,129,0.45),0_22px_55px_rgba(16,185,129,0.22)] active:translate-y-0 sm:min-h-14 sm:w-auto sm:min-w-[12.5rem] sm:px-6 sm:leading-normal"
@@ -128,7 +128,7 @@ export default function Home() {
 
               <div
                 id="servicii"
-                className="scroll-anchor mt-10 w-full max-w-xl max-sm:mt-[4.75rem] sm:mt-11"
+                className="scroll-anchor mt-10 w-full max-w-xl max-sm:mt-12 sm:mt-11"
               >
                 <div
                   className={`${inter.className} mt-6 text-left text-base font-normal leading-7 text-zinc-100 sm:text-lg`}

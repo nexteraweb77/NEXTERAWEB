@@ -19,8 +19,13 @@ export function OrganizationJsonLd() {
       address: {
         "@type": "PostalAddress",
         addressLocality: "Brașov",
+        addressRegion: "Județul Brașov",
         addressCountry: "RO",
       },
+      areaServed: [
+        { "@type": "City", name: "Brașov" },
+        { "@type": "AdministrativeArea", name: "Județul Brașov" },
+      ],
       contactPoint: [
         {
           "@type": "ContactPoint",
