@@ -1136,6 +1136,9 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
                   Site-uri moderne, magazine online rapide , automatizate si optimizate pentru afaceri
                 </p>
+                <p className="mt-2 text-sm font-medium leading-6 text-zinc-300/85">
+                  Toate preturile afisate contin TVA
+                </p>
               </div>
 
               <div>
