@@ -133,7 +133,7 @@ export default function Home() {
                 <div
                   className={`${montserrat.className} mt-6 text-left text-[1.05rem] font-light leading-[1.72] tracking-[-0.01em] text-zinc-100 sm:text-lg sm:leading-[1.75]`}
                 >
-                  Nu construiesc doar simple site-uri,ci experiente digitale
+                  Nu construiesc doar simple site-uri, ci experiente digitale
                   gandite sa aduca{" "}
                   <strong className="font-semibold text-white">
                     rezultate reale
