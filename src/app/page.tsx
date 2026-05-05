@@ -61,7 +61,7 @@ export default function Home() {
                     className={`${inter.className} text-pretty text-balance text-[clamp(1.22rem,4.1vw,1.58rem)] font-bold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.24rem,3.85vw,1.62rem)] min-[430px]:text-[1.32rem] min-[430px]:leading-snug sm:text-xl sm:font-semibold sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:font-semibold lg:leading-relaxed lg:text-zinc-100/95`}
                   >
                     Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de
-                    internet
+                    internet !
                   </p>
                   <span
                     className="block h-px w-12 shrink-0 rounded-full bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent sm:w-14 lg:hidden"
@@ -138,7 +138,7 @@ export default function Home() {
                   <strong className="font-semibold text-white">
                     rezultate reale
                   </strong>{" "}
-                  afacerii tale
+                  afacerii tale !
                 </div>
 
                 <h2 className="mt-6 text-left text-3xl font-semibold leading-snug tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -1134,9 +1134,9 @@ export default function Home() {
                   NEXTERAWEB
                 </div>
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
-                  Site-uri moderne, magazine online rapide , automatizate si optimizate pentru afaceri
+                  Ecosisteme digitale complete: magazine online de înaltă performanță, platforme customizate și aplicații mobile, toate integrate prin automatizări inteligente pentru eficiență maximă
                 </p>
-                <p className="mt-2 text-sm font-medium leading-6 text-zinc-300/85">
+                <p className="mt-2 text-sm font-medium leading-6 text-zinc-200/90">
                   Toate preturile afisate contin TVA
                 </p>
               </div>
