@@ -28,8 +28,8 @@ export default function Home() {
             className="pointer-events-none absolute inset-0"
             multiplier={0.038}
           >
-            <div className="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/[0.30] blur-[96px]" />
-            <div className="absolute -bottom-56 -left-56 h-[min(100vw,640px)] w-[min(100vw,640px)] max-w-[140%] rounded-full bg-emerald-300/[0.16] blur-[112px] sm:-bottom-64 sm:-left-64" />
+            <div className="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/[0.36] blur-[92px]" />
+            <div className="absolute -bottom-56 -left-56 h-[min(100vw,640px)] w-[min(100vw,640px)] max-w-[140%] rounded-full bg-emerald-300/[0.20] blur-[104px] sm:-bottom-64 sm:-left-64" />
             <div
               className="absolute inset-x-0 bottom-0 h-[min(48vh,420px)] bg-gradient-to-t from-black/70 via-black/20 to-transparent"
               aria-hidden
@@ -133,9 +133,9 @@ export default function Home() {
                 <div
                   className={`${montserrat.className} mt-6 text-left text-[1.05rem] font-light leading-[1.72] tracking-[-0.01em] text-zinc-100 sm:text-lg sm:leading-[1.75]`}
                 >
-                  Nu construiesc simple site-uri, ci experiențe digitale gândite
-                  să aducă{" "}
-                  <strong className="font-bold text-white">
+                  Nu construdiesc doar simple site-uri,ci experiente digitale
+                  gandite sa aduca{" "}
+                  <strong className="font-semibold text-white">
                     rezultate reale
                   </strong>{" "}
                   afacerii tale
@@ -1134,7 +1134,7 @@ export default function Home() {
                   NEXTERAWEB
                 </div>
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
-                  Site-uri moderne, magazine online rapide , automatizate si optimizate pentru afaceri locale
+                  Site-uri moderne, magazine online rapide , automatizate si optimizate pentru afaceri
                 </p>
               </div>
 
