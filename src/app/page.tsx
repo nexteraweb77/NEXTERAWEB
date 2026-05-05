@@ -28,8 +28,8 @@ export default function Home() {
             className="pointer-events-none absolute inset-0"
             multiplier={0.038}
           >
-            <div className="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/[0.22] blur-[100px]" />
-            <div className="absolute -bottom-56 -left-56 h-[min(100vw,640px)] w-[min(100vw,640px)] max-w-[140%] rounded-full bg-emerald-300/[0.11] blur-[120px] sm:-bottom-64 sm:-left-64" />
+            <div className="absolute -top-48 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/[0.30] blur-[96px]" />
+            <div className="absolute -bottom-56 -left-56 h-[min(100vw,640px)] w-[min(100vw,640px)] max-w-[140%] rounded-full bg-emerald-300/[0.16] blur-[112px] sm:-bottom-64 sm:-left-64" />
             <div
               className="absolute inset-x-0 bottom-0 h-[min(48vh,420px)] bg-gradient-to-t from-black/70 via-black/20 to-transparent"
               aria-hidden
@@ -131,10 +131,10 @@ export default function Home() {
                 className="scroll-anchor mt-10 w-full max-w-xl max-sm:mt-12 sm:mt-11"
               >
                 <div
-                  className={`${inter.className} mt-6 text-left text-base font-normal leading-7 text-zinc-100 sm:text-lg`}
+                  className={`${montserrat.className} mt-6 text-left text-[1.05rem] font-light leading-[1.72] tracking-[-0.01em] text-zinc-100 sm:text-lg sm:leading-[1.75]`}
                 >
-                  Nu creez doar simple site-uri, ci instrumente digitale
-                  concepute să aducă{" "}
+                  Nu construiesc simple site-uri, ci experiențe digitale gândite
+                  să aducă{" "}
                   <strong className="font-bold text-white">
                     rezultate reale
                   </strong>{" "}
@@ -277,10 +277,10 @@ export default function Home() {
                       <p
                         className={`${inter.className} text-pretty text-[1.0625rem] font-normal leading-[1.72] tracking-normal text-zinc-200 antialiased sm:text-[1.125rem] sm:leading-[1.75]`}
                       >
-                        Fie că avem nevoie de o soluție construită integral de la
-                        zero sau de adaptarea unei platforme existente,
-                        rezultatul este mereu același: un site modelat perfect
-                        după nevoile afacerii tale, fără compromisuri tehnice sau
+                        Indiferent dacă ai nevoie de o soluție construită integral
+                        de la zero sau de adaptarea unei platforme existente,
+                        rezultatul rămâne același: un site modelat perfect după
+                        nevoile afacerii tale, fără compromisuri tehnice sau
                         vizuale
                       </p>
                     </blockquote>
@@ -928,7 +928,7 @@ export default function Home() {
               </h2>
               <div className="mt-4 max-w-2xl space-y-3 text-zinc-300">
                 <p className="text-lg font-medium leading-snug text-white sm:text-xl">
-                  Hai să construim ceva memorabil !
+                  Hai să construim ceva memorabil 😊
                 </p>
                 <p className="max-w-xl text-pretty text-base font-normal leading-relaxed text-[#F5F5F7]/95 sm:text-lg sm:leading-relaxed">
                   <a
@@ -1134,7 +1134,7 @@ export default function Home() {
                   NEXTERAWEB
                 </div>
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
-                  Site-uri moderne, rapide și optimizate pentru afaceri locale.
+                  Site-uri moderne, magazine online rapide , automatizate si optimizate pentru afaceri locale
                 </p>
               </div>
 
