@@ -58,9 +58,12 @@ export default function AsigurareDigitalaPage() {
             <p className="mt-4 text-base font-medium leading-snug tracking-[0.04em] text-white sm:text-lg">
               Soluții digitale croite pe măsură
             </p>
-            <p className="mt-3 text-pretty text-sm font-medium leading-relaxed text-emerald-200/80 sm:text-[0.95rem]">
-              Indiferent de pachetul ales, ai domeniu + hosting gratuit,pe toata
-              durata abonamentului
+            <p className="mt-3 text-pretty text-[0.95rem] font-medium leading-relaxed text-white sm:text-[1rem]">
+              Indiferent de pachetul ales, ai{" "}
+              <span className="text-[1.02em] font-semibold text-amber-200/95">
+                Domeniu + Hosting Gratuit
+              </span>
+              , pe toata durata abonamentului
             </p>
           </div>
 
