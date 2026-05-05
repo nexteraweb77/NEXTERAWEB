@@ -20,9 +20,6 @@ const BUY_PARTNER_URL = waBuyUrl(
 const buyBtnClass =
   "inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-amber-300/40 bg-gradient-to-r from-amber-500/30 to-yellow-600/20 px-6 text-sm font-semibold text-amber-50 shadow-[0_0_0_1px_rgba(251,191,36,0.22),0_8px_28px_rgba(245,158,11,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-amber-200/55 hover:from-amber-400/40 hover:shadow-[0_0_0_1px_rgba(253,224,71,0.3),0_12px_36px_rgba(245,158,11,0.2)] active:translate-y-0";
 
-const detailsBtnClass =
-  "inline-flex min-h-10 shrink-0 flex-col items-start justify-center rounded-full border border-white/15 bg-white/[0.04] px-6 py-2 text-left text-xs font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition duration-300 ease-out hover:-translate-y-0.5 hover:border-amber-200/35 hover:bg-white/[0.06] active:translate-y-0";
-
 export default function AsigurareDigitalaPage() {
   return (
     <div className="min-h-screen bg-black text-zinc-100">
@@ -107,18 +104,11 @@ export default function AsigurareDigitalaPage() {
                     Liniște sufletească: Știi că site-ul e online și protejat
                   </div>
                 </div>
-                <div className="mt-6 flex items-stretch justify-between gap-4 border-t border-white/10 pt-4">
-                  <div className="flex min-w-0 items-center">
-                    <div className={detailsBtnClass}>
-                      <span className="text-[0.7rem] uppercase tracking-[0.18em] text-zinc-400">
-                        Alte detalii
-                      </span>
-                      <span className="mt-1 text-pretty text-[0.82rem] font-medium italic leading-snug text-amber-100/80">
-                        Preț afișat în EUR. Plata se efectuează în RON, la cursul
-                        aplicat de procesatorul de plăți/banca emitentă.
-                      </span>
-                    </div>
-                  </div>
+                <div className="mt-6 flex items-end justify-between gap-4 border-t border-white/10 pt-4">
+                  <p className="max-w-[28rem] text-pretty text-xs font-medium italic leading-relaxed tracking-[0.01em] text-amber-100/75">
+                    Preț afișat în EUR. Plata se efectuează în RON, la cursul
+                    aplicat de procesatorul de plăți/banca emitentă.
+                  </p>
                   <a
                     href={BUY_PROTECT_URL}
                     target="_blank"
@@ -166,18 +156,11 @@ export default function AsigurareDigitalaPage() {
                     nu pierzi clienți
                   </div>
                 </div>
-                <div className="mt-6 flex items-stretch justify-between gap-4 border-t border-white/10 pt-4">
-                  <div className="flex min-w-0 items-center">
-                    <div className={detailsBtnClass}>
-                      <span className="text-[0.7rem] uppercase tracking-[0.18em] text-zinc-400">
-                        Alte detalii
-                      </span>
-                      <span className="mt-1 text-pretty text-[0.82rem] font-medium italic leading-snug text-amber-100/80">
-                        Preț afișat în EUR. Plata se efectuează în RON, la cursul
-                        aplicat de procesatorul de plăți/banca emitentă.
-                      </span>
-                    </div>
-                  </div>
+                <div className="mt-6 flex items-end justify-between gap-4 border-t border-white/10 pt-4">
+                  <p className="max-w-[28rem] text-pretty text-xs font-medium italic leading-relaxed tracking-[0.01em] text-amber-100/75">
+                    Preț afișat în EUR. Plata se efectuează în RON, la cursul
+                    aplicat de procesatorul de plăți/banca emitentă.
+                  </p>
                   <a
                     href={BUY_GROWTH_URL}
                     target="_blank"
@@ -231,18 +214,11 @@ export default function AsigurareDigitalaPage() {
                     putem optimiza
                   </div>
                 </div>
-                <div className="mt-6 flex items-stretch justify-between gap-4 border-t border-white/10 pt-4">
-                  <div className="flex min-w-0 items-center">
-                    <div className={detailsBtnClass}>
-                      <span className="text-[0.7rem] uppercase tracking-[0.18em] text-zinc-400">
-                        Alte detalii
-                      </span>
-                      <span className="mt-1 text-pretty text-[0.82rem] font-medium italic leading-snug text-amber-100/80">
-                        Preț afișat în EUR. Plata se efectuează în RON, la cursul
-                        aplicat de procesatorul de plăți/banca emitentă.
-                      </span>
-                    </div>
-                  </div>
+                <div className="mt-6 flex items-end justify-between gap-4 border-t border-white/10 pt-4">
+                  <p className="max-w-[28rem] text-pretty text-xs font-medium italic leading-relaxed tracking-[0.01em] text-amber-100/75">
+                    Preț afișat în EUR. Plata se efectuează în RON, la cursul
+                    aplicat de procesatorul de plăți/banca emitentă.
+                  </p>
                   <a
                     href={BUY_PARTNER_URL}
                     target="_blank"
