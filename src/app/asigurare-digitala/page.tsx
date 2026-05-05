@@ -78,6 +78,10 @@ export default function AsigurareDigitalaPage() {
                     <span className="font-medium text-zinc-200">
                       Esențial pentru siguranța ta
                     </span>
+                    <div className="mt-2 text-xs font-medium italic leading-relaxed tracking-[0.01em] text-amber-100/80">
+                      Preț afișat în EUR. Plata se efectuează în RON, la cursul
+                      aplicat de procesatorul de plăți/banca emitentă.
+                    </div>
                   </div>
                   <div className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition group-open:bg-white/12">
                     Vezi detalii
@@ -128,6 +132,10 @@ export default function AsigurareDigitalaPage() {
                     <span className="font-medium text-zinc-200">
                       Pentru afaceri care vor să crească constant
                     </span>
+                    <div className="mt-2 text-xs font-medium italic leading-relaxed tracking-[0.01em] text-amber-100/80">
+                      Preț afișat în EUR. Plata se efectuează în RON, la cursul
+                      aplicat de procesatorul de plăți/banca emitentă.
+                    </div>
                   </div>
                   <div className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition group-open:bg-white/12">
                     Vezi detalii
@@ -176,6 +184,10 @@ export default function AsigurareDigitalaPage() {
                     <span className="font-medium text-zinc-200">
                       Echipa ta tehnică la un mesaj distanță
                     </span>
+                    <div className="mt-2 text-xs font-medium italic leading-relaxed tracking-[0.01em] text-amber-100/80">
+                      Preț afișat în EUR. Plata se efectuează în RON, la cursul
+                      aplicat de procesatorul de plăți/banca emitentă.
+                    </div>
                   </div>
                   <div className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition group-open:bg-white/12">
                     Vezi detalii
