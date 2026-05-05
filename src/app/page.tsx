@@ -853,8 +853,8 @@ export default function Home() {
                       <p
                         className={`${inter.className} relative text-pretty text-center text-[1.05rem] font-normal leading-[1.85] tracking-[0.01em] text-zinc-200 sm:text-left sm:text-[1.08rem] sm:leading-[1.88]`}
                       >
-                        Muzica m-a învățat ritmul, iar mecatronica m-a învățat
-                        precizia. Pentru mine, un site premium este un mecanism fin,
+                        Muzica m-a invatat ritmul, iar studiile in mecatronica mi-au
+                        format precizia. Pentru mine, un site premium este un mecanism fin,
                         unde tehnologia întâlnește arta. Totul începe cu un gând, un
                         vers, un pixel sau un cod, așezat exact unde îi este locul. Așa
                         cum un robot industrial execută fiecare mișcare fără eroare, eu
