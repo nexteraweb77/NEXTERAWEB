@@ -50,10 +50,10 @@ export default function Home() {
                     priority
                   />
                   <div
-                    className={`tagline-neon-shimmer ${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
+                    className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
-                    NEXTERAWEB
-                    <span className="ml-1 relative -top-[0.22em] text-[0.56em] font-semibold tracking-normal opacity-80">
+                    <span className="tagline-neon-shimmer">NEXTERAWEB</span>
+                    <span className="tagline-neon-shimmer ml-1 relative -top-[0.22em] inline-block text-[0.56em] font-semibold tracking-normal opacity-80">
                       ™
                     </span>
                   </div>
@@ -1362,11 +1362,9 @@ export default function Home() {
                     </span>
                     <p className="text-pretty text-[1.05rem] font-semibold leading-snug tracking-[-0.02em] text-zinc-100 sm:text-lg lg:text-xl">
                       © {new Date().getFullYear()}{" "}
-                      <span className="tagline-neon-shimmer">
-                        NEXTERAWEB
-                        <span className="ml-1 align-super text-[0.65em] font-semibold text-emerald-100/90">
-                          ™
-                        </span>
+                      <span className="tagline-neon-shimmer">NEXTERAWEB</span>
+                      <span className="tagline-neon-shimmer ml-1 relative -top-[0.28em] inline-block text-[0.65em] font-semibold opacity-85">
+                        ™
                       </span>
                       <span className="font-medium text-zinc-400"> · </span>
                       <span className="font-medium text-zinc-300">
