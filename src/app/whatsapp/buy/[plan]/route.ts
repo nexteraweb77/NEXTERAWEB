@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
-type Params = {
-  plan?: string;
-};
-
-export function GET(_req: Request, ctx: { params: Params }) {
-  const plan = (ctx.params.plan ?? "").toLowerCase();
+export async function GET(
+  _req: NextRequest,
+  ctx: { params: Promise<{ plan: string }> },
+) {
+  const { plan } = await ctx.params;
+  const normalizedPlan = (plan ?? "").toLowerCase();
 
   const number = ["40", "75", "38", "34", "96", "5"].join("");
 
@@ -18,7 +18,7 @@ export function GET(_req: Request, ctx: { params: Params }) {
       "Bună! Vreau să activez pachetul PARTNER — Asigurare Digitală (80€/lună). Aș dori să discutăm pașii pentru plată și activare.",
   };
 
-  const message = messageByPlan[plan] ?? messageByPlan.protect;
+  const message = messageByPlan[normalizedPlan] ?? messageByPlan.protect;
   const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
   return NextResponse.redirect(url, { status: 302 });
 }
