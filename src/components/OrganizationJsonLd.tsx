@@ -14,7 +14,7 @@ export function OrganizationJsonLd() {
       name: "NEXTERAWEB",
       url: base,
       logo: `${base}/logo.png`,
-      email: "nexteraweb77@gmail.com",
+      email: "contact.nexteraweb@gmail.com",
       sameAs: [INSTAGRAM_PROFILE_URL],
       address: {
         "@type": "PostalAddress",

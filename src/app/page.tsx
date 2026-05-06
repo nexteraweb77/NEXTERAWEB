@@ -483,7 +483,19 @@ export default function Home() {
                       <span className="text-xl leading-none text-emerald-300">
                         +
                       </span>
-                      <span>2 săptămâni mentenanță gratuită</span>
+                      <span className="min-w-0 flex-1 text-pretty">
+                        2 saptamani mentenanta{" "}
+                        <span className="ml-1 font-medium tracking-[0.08em] text-white/90">
+                          pachetul{" "}
+                          <span className="font-semibold text-emerald-200/95">
+                            PROTECT
+                          </span>
+                        </span>{" "}
+                        + Prima luna-domeniu+hosting{" "}
+                        <span className="ml-1 inline-block text-[1.05em] font-extrabold uppercase tracking-[0.06em] text-emerald-100">
+                          Gratuite
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </details>
@@ -540,7 +552,19 @@ export default function Home() {
                       <span className="text-xl leading-none text-emerald-300">
                         +
                       </span>
-                      <span>1 lună mentenanță gratuită</span>
+                      <span className="min-w-0 flex-1 text-pretty">
+                        3 saptamani de mentenanta{" "}
+                        <span className="ml-1 font-medium tracking-[0.08em] text-white/90">
+                          pachetul{" "}
+                          <span className="font-semibold text-emerald-200/95">
+                            GROWTH
+                          </span>
+                        </span>{" "}
+                        + prima luna domeniu+hosting{" "}
+                        <span className="ml-1 inline-block text-[1.05em] font-extrabold uppercase tracking-[0.06em] text-emerald-100">
+                          Gratuite
+                        </span>
+                      </span>
                     </div>
                   </div>
                 </details>
@@ -598,8 +622,18 @@ export default function Home() {
                         +
                       </span>
                       <span className="min-w-0 flex-1 text-pretty">
-                        2 luni de suport VIP și mentenanță completă. Zero griji
-                        tehnice în perioada critică de după lansare
+                        30 de zile mentenanta{" "}
+                        <span className="ml-1 font-medium tracking-[0.08em] text-white/90">
+                          pachetul{" "}
+                          <span className="font-semibold text-emerald-200/95">
+                            PARTNER
+                          </span>
+                        </span>{" "}
+                        + prima luna domeniu+hosting{" "}
+                        <span className="ml-1 inline-block text-[1.05em] font-extrabold uppercase tracking-[0.06em] text-emerald-100">
+                          Gratuite
+                        </span>
+                        .
                       </span>
                     </div>
                   </div>
@@ -1018,8 +1052,8 @@ export default function Home() {
                   </a>
 
                   <a
-                    href="mailto:nexteraweb77@gmail.com"
-                    aria-label="Trimite email la nexteraweb77@gmail.com"
+                    href="mailto:contact.nexteraweb@gmail.com"
+                    aria-label="Trimite email la contact.nexteraweb@gmail.com"
                     className="group relative flex flex-col items-center gap-3 overflow-hidden p-6 text-center transition-all duration-300 ease-out will-change-transform motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:hover:scale-100 motion-reduce:hover:shadow-none sm:p-7
                     hover:-translate-y-1 hover:z-10 hover:bg-white/[0.07] hover:shadow-[0_16px_48px_rgba(0,0,0,0.38),0_0_0_1px_rgba(90,200,250,0.2),inset_0_1px_0_rgba(255,255,255,0.07)]
                     focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5AC8FA]/45
@@ -1040,7 +1074,7 @@ export default function Home() {
                       <div className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-zinc-500">
                         Email
                       </div>
-                      <span className="sr-only">nexteraweb77@gmail.com</span>
+                      <span className="sr-only">contact.nexteraweb@gmail.com</span>
                     </div>
                   </a>
 
@@ -1180,9 +1214,9 @@ export default function Home() {
                     Email:{" "}
                     <a
                       className="text-zinc-200 hover:text-white transition"
-                      href="mailto:nexteraweb77@gmail.com"
+                      href="mailto:contact.nexteraweb@gmail.com"
                     >
-                      nexteraweb77@gmail.com
+                      contact.nexteraweb@gmail.com
                     </a>
                   </div>
                   <div>
