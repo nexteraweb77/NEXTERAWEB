@@ -21,7 +21,7 @@ const siteDescription =
 
 const siteName = "NEXTERAWEB";
 const defaultTitle =
-  "Web Designer Brașov | Creez Site-uri Moderne pentru Afaceri Locale";
+  "NEXTERAWEB | Creare Site-uri Web Profesionale în România";
 
 const canonicalRoot = new URL("/", getMetadataBase()).href;
 
