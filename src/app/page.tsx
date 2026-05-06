@@ -53,7 +53,7 @@ export default function Home() {
                     className={`tagline-neon-shimmer ${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
                     NEXTERAWEB
-                    <span className="ml-1 align-super text-[0.52em] font-semibold tracking-normal opacity-80">
+                    <span className="ml-1 relative -top-[0.22em] text-[0.56em] font-semibold tracking-normal opacity-80">
                       ™
                     </span>
                   </div>
