@@ -1359,7 +1359,12 @@ export default function Home() {
                     </span>
                     <p className="text-pretty text-[1.05rem] font-semibold leading-snug tracking-[-0.02em] text-zinc-100 sm:text-lg lg:text-xl">
                       © {new Date().getFullYear()}{" "}
-                      <span className="text-white">NEXTERAWEB</span>
+                      <span className="tagline-neon-shimmer">
+                        NEXTERAWEB
+                        <span className="ml-1 align-super text-[0.65em] font-semibold text-emerald-100/90">
+                          ™
+                        </span>
+                      </span>
                       <span className="font-medium text-zinc-400"> · </span>
                       <span className="font-medium text-zinc-300">
                         Toate drepturile rezervate

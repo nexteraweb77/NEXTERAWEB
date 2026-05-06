@@ -8,7 +8,7 @@ function waBuyUrl(message: string) {
 }
 
 const BUY_PROTECT_URL = waBuyUrl(
-  "Bună! Vreau să activez pachetul PROTECT — Asigurare Digitală (30€/lună). Aș dori să discutăm pașii pentru plată și activare.",
+  "Bună! Vreau să activez pachetul PROTECT — Asigurare Digitală (35€/lună). Aș dori să discutăm pașii pentru plată și activare.",
 );
 const BUY_GROWTH_URL = waBuyUrl(
   "Bună! Vreau să activez pachetul GROWTH — Asigurare Digitală (50€/lună). Aș dori să discutăm pașii pentru plată și activare.",
@@ -73,7 +73,7 @@ export default function AsigurareDigitalaPage() {
                 <div className="flex items-start justify-between gap-4">
                   <div className="text-sm font-semibold leading-snug sm:text-base">
                     <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-400 bg-clip-text text-transparent">
-                      Pachetul PROTECT – 30€ / lună
+                      Pachetul PROTECT – 35€ / lună
                     </span>{" "}
                     <span className="font-medium text-zinc-200">
                       Esențial pentru siguranța ta

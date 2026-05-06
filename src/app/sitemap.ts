@@ -7,6 +7,10 @@ const paths: {
   priority: number;
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
+  { path: "/creare-site-uri", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/creare-site-uri-web-profesionale", changeFrequency: "weekly", priority: 0.88 },
+  { path: "/creare-site-prezentare", changeFrequency: "weekly", priority: 0.87 },
+  { path: "/pret-creare-site", changeFrequency: "weekly", priority: 0.85 },
   { path: "/portofoliu", changeFrequency: "monthly", priority: 0.85 },
   { path: "/abilitati", changeFrequency: "monthly", priority: 0.75 },
   { path: "/asigurare-digitala", changeFrequency: "monthly", priority: 0.75 },
