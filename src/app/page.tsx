@@ -50,9 +50,9 @@ export default function Home() {
                   <div
                     className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
-                    <span className="relative inline-block pr-[0.52em] sm:pr-[0.5em] lg:pr-[0.48em]">
+                    <span className="relative inline-block pr-[0.42em] sm:pr-[0.4em] lg:pr-[0.38em]">
                       <span className="tagline-neon-shimmer">NEXTERAWEB</span>
-                      <span className="tagline-neon-shimmer pointer-events-none absolute right-[-0.08em] sm:right-[-0.09em] lg:right-[-0.1em] top-0 -translate-y-[40%] sm:-translate-y-[42%] lg:-translate-y-[45%] text-[0.46em] sm:text-[0.44em] lg:text-[0.42em] font-semibold tracking-normal opacity-80">
+                      <span className="tagline-neon-shimmer pointer-events-none absolute right-[-0.02em] sm:right-[-0.03em] lg:right-[-0.04em] top-0 -translate-y-[40%] sm:-translate-y-[42%] lg:-translate-y-[45%] text-[0.46em] sm:text-[0.44em] lg:text-[0.42em] font-semibold tracking-normal opacity-80">
                         ™
                       </span>
                     </span>
