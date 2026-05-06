@@ -52,9 +52,11 @@ export default function Home() {
                   <div
                     className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
-                    <span className="tagline-neon-shimmer">NEXTERAWEB</span>
-                    <span className="tagline-neon-shimmer ml-1 relative -top-[0.22em] inline-block text-[0.56em] font-semibold tracking-normal opacity-80">
-                      ™
+                    <span className="relative inline-block pr-[0.9em]">
+                      <span className="tagline-neon-shimmer">NEXTERAWEB</span>
+                      <span className="tagline-neon-shimmer pointer-events-none absolute right-0 top-0 -translate-y-[40%] sm:-translate-y-[42%] lg:-translate-y-[45%] text-[0.46em] sm:text-[0.44em] lg:text-[0.42em] font-semibold tracking-normal opacity-80">
+                        ™
+                      </span>
                     </span>
                   </div>
                 </div>
