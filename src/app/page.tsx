@@ -893,7 +893,7 @@ export default function Home() {
                         Muzica m-a invatat ritmul, iar studiile in mecatronica mi-au
                         format precizia. Pentru mine, un site premium este un mecanism fin,
                         unde tehnologia întâlnește arta. Totul începe cu un gând, un
-                        vers, un pixel sau un cod, așezat exact unde îi este locul. Așa
+                        cuvânt, un pixel sau un cod, așezat exact unde îi este locul. Așa
                         cum un robot industrial execută fiecare mișcare fără eroare, eu
                         îți
                         construiesc site-ul cu o logică impecabilă, unde codul și
@@ -1401,7 +1401,7 @@ export default function Home() {
                         —
                       </span>
                       <span className="w-full font-medium text-zinc-200 transition group-hover:text-zinc-50 sm:w-auto sm:font-semibold">
-                        Web Design &amp; SEO
+                        Full-stack Developer, Web Design &amp; SEO
                       </span>
                     </div>
                   </div>
