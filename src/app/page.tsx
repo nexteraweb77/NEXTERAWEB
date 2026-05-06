@@ -484,7 +484,7 @@ export default function Home() {
                         +
                       </span>
                       <span className="min-w-0 flex-1 text-pretty">
-                        2 saptamani mentenanta{" "}
+                        10 zile mentenanta{" "}
                         <span className="ml-1 font-medium tracking-[0.08em] text-white/90">
                           pachetul{" "}
                           <span className="font-semibold text-emerald-200/95">
@@ -553,7 +553,7 @@ export default function Home() {
                         +
                       </span>
                       <span className="min-w-0 flex-1 text-pretty">
-                        3 saptamani de mentenanta{" "}
+                        20 de zile mentenanta{" "}
                         <span className="ml-1 font-medium tracking-[0.08em] text-white/90">
                           pachetul{" "}
                           <span className="font-semibold text-emerald-200/95">
@@ -673,8 +673,8 @@ export default function Home() {
                       <div className="space-y-5">
                         <div>
                           <div className="text-base font-medium text-white">
-                            Design Logo Minimalist{" "}
-                            <span className="text-emerald-300/95">(+150€)</span>
+                            Design Logo Minimalist , favicon,icons{" "}
+                            <span className="text-emerald-300/95">(+400€)</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Crearea unei identități vizuale moderne, livrată în
@@ -714,7 +714,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Sistem Rezervări / Calendar{" "}
-                            <span className="text-emerald-300/95">(+250€)</span>
+                            <span className="text-emerald-300/95">(+300€)</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Automatizare completă pentru programări, sincronizată
@@ -724,7 +724,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Formular Contact Avansat{" "}
-                            <span className="text-emerald-300/95">(+80€)</span>
+                            <span className="text-emerald-300/95">(+100€)</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Câmpuri personalizate, logică condiționată și
@@ -733,8 +733,8 @@ export default function Home() {
                         </div>
                         <div>
                           <div className="text-base font-medium text-white">
-                            Integrare WhatsApp &amp; Maps{" "}
-                            <span className="text-emerald-300/95">(+50€)</span>
+                            Integrare WhatsApp, Email, Instagram &amp; Maps{" "}
+                            <span className="text-emerald-300/95">(+100€)</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Pachet de contact rapid (buton plutitor WhatsApp +
@@ -754,7 +754,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Setup Tehnic Complet{" "}
-                            <span className="text-emerald-300/95">(+80€)</span>
+                            <span className="text-emerald-300/95">(+100€)</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Achiziție domeniu .ro, configurare hosting, email
