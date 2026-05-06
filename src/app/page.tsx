@@ -15,9 +15,7 @@ const montserrat = Montserrat({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const WHATSAPP_CHAT_URL = `https://wa.me/40753834965?text=${encodeURIComponent(
-  "Bună! Am vizitat site-ul tău și mi-ar plăcea să discutăm despre transformarea prezenței mele online. Putem stabili o consultanță gratuită?",
-)}`;
+const WHATSAPP_CHAT_URL = "/whatsapp";
 
 export default function Home() {
   return (

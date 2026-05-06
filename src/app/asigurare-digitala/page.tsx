@@ -1,21 +1,9 @@
 import { ScrollParallaxLayer } from "@/components/ScrollParallaxLayer";
 import Link from "next/link";
 
-const NEXTERA_WA = "40753834965";
-
-function waBuyUrl(message: string) {
-  return `https://wa.me/${NEXTERA_WA}?text=${encodeURIComponent(message)}`;
-}
-
-const BUY_PROTECT_URL = waBuyUrl(
-  "Bună! Vreau să activez pachetul PROTECT — Asigurare Digitală (35€/lună). Aș dori să discutăm pașii pentru plată și activare.",
-);
-const BUY_GROWTH_URL = waBuyUrl(
-  "Bună! Vreau să activez pachetul GROWTH — Asigurare Digitală (50€/lună). Aș dori să discutăm pașii pentru plată și activare.",
-);
-const BUY_PARTNER_URL = waBuyUrl(
-  "Bună! Vreau să activez pachetul PARTNER — Asigurare Digitală (80€/lună). Aș dori să discutăm pașii pentru plată și activare.",
-);
+const BUY_PROTECT_URL = "/whatsapp/buy/protect";
+const BUY_GROWTH_URL = "/whatsapp/buy/growth";
+const BUY_PARTNER_URL = "/whatsapp/buy/partner";
 
 const buyBtnClass =
   "inline-flex min-h-10 shrink-0 items-center justify-center rounded-full border border-amber-300/40 bg-gradient-to-r from-amber-500/30 to-yellow-600/20 px-6 text-sm font-semibold text-amber-50 shadow-[0_0_0_1px_rgba(251,191,36,0.22),0_8px_28px_rgba(245,158,11,0.14)] transition duration-300 ease-out hover:-translate-y-0.5 hover:border-amber-200/55 hover:from-amber-400/40 hover:shadow-[0_0_0_1px_rgba(253,224,71,0.3),0_12px_36px_rgba(245,158,11,0.2)] active:translate-y-0";
