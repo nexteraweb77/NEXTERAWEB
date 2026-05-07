@@ -14,6 +14,10 @@ export function getSiteUrl(): string {
     const host = vercel.replace(/^https?:\/\//, "").split("/")[0];
     return `https://${host}`;
   }
+  /** Build-uri pe Hostinger fără env — evită localhost în metadata/Open Graph. */
+  if (process.env.NODE_ENV === "production") {
+    return "https://nexteraweb.ro";
+  }
   return "http://localhost:3000";
 }
 

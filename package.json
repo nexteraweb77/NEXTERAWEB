@@ -8,7 +8,7 @@
   "scripts": {
     "postinstall": "node scripts/patch-next-network-host.cjs",
     "dev": "node scripts/patch-next-network-host.cjs && next dev -H 127.0.0.1",
-    "build": "next build",
+    "build": "next build && node scripts/prepare-standalone.cjs",
     "start": "node scripts/start-production.cjs",
     "lint": "eslint",
     "make:logo-transparent": "node scripts/make-logo-transparent.mjs"
