@@ -55,6 +55,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     let lenis: Lenis | null = null;
     let rafId = 0;
     let postLayout = 0;
+    let visibilityHandler: (() => void) | null = null;
 
     try {
       lenis = new Lenis({
@@ -81,10 +82,22 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
       }
 
       const raf = (time: number) => {
-        lenis?.raf(time);
+        // Când tab-ul e ascuns, nu mai rulăm raf continuu (reduce CPU + micro-stutter la revenire).
+        if (!document.hidden) {
+          lenis?.raf(time);
+        }
         rafId = requestAnimationFrame(raf);
       };
       rafId = requestAnimationFrame(raf);
+
+      visibilityHandler = () => {
+        if (!lenis) return;
+        if (!document.hidden) {
+          // La revenire, sincronizăm măsurătorile; evită “salturi” în primele frame-uri.
+          syncLenisResize(lenis);
+        }
+      };
+      document.addEventListener("visibilitychange", visibilityHandler, { passive: true });
 
       postLayout = requestAnimationFrame(() => {
         if (!lenis) return;
@@ -100,6 +113,9 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     return () => {
       cancelAnimationFrame(postLayout);
       cancelAnimationFrame(rafId);
+      if (visibilityHandler) {
+        document.removeEventListener("visibilitychange", visibilityHandler);
+      }
       const w = window as Window & { __nexteraLenis?: Lenis };
       if (lenis) {
         try {
