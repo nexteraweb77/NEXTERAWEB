@@ -38,3 +38,12 @@ Opțional, dacă instalarea pe server se plânge de patch-ul local Next (Mac): `
 ## După modificări
 
 Salvează setările, apoi **Redeploy**. Testează site-ul într-o fereastră privată (fără cache vechi).
+
+## Dacă vezi pagină albă sau doar linkuri fără design
+
+1. **Curăță cache-ul CDN** în hPanel (Hostinger / hCDN): după fiecare deploy nou, un HTML vechi putea cere fișiere `/_next/static/...` care nu mai există → lipsesc CSS-urile. Caută „Purge cache” / „Clear cache” pentru domeniu.
+2. Deschide mereu **`https://nexteraweb.ro`** (fără `www`). Până când `www` e legat corect de aceeași aplicație în panou, `www` poate da eroare (ex. 503).
+3. În browser: **hard refresh** (Ctrl+Shift+R / Cmd+Shift+R) sau fereastră privată.
+
+Codul site-ului folosește **`revalidate` 300 s** pe layout ca HTML-ul să nu rămână „înghețat” ani la CDN față de chunk-urile noi.
+

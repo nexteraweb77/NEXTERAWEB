@@ -6,6 +6,14 @@ import { Navbar } from "@/components/Navbar";
 import { SiteProviders } from "@/components/SiteProviders";
 import { getMetadataBase, getSiteUrl } from "@/lib/site-url";
 
+/**
+ * Fără asta, Next poate marca HTML-ul cu s-maxage foarte mare la CDN (ex. 1 an).
+ * După un deploy nou, CDN-ul poate servi încă HTML vechi care referă chunk-uri
+ * `/_next/static/*` cu hash-uri vechi → 404 la CSS/JS → pagină albă sau fără stil.
+ * 300 s = revalidare la ~5 minute (compromis între cache și siguranță la deploy).
+ */
+export const revalidate = 300;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
