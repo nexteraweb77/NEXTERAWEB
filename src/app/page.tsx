@@ -657,6 +657,10 @@ export default function Home() {
                           Personalizează-ți proiectul cu funcționalități care
                           accelerează creșterea
                         </p>
+                        <p className="mt-2 text-sm font-normal italic leading-relaxed text-zinc-400 sm:text-base sm:text-zinc-500">
+                          *Prețuri dinamice, în funcție de amploarea și detaliile
+                          proiectului.*
+                        </p>
                       </div>
                       <div className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition group-open:bg-white/12">
                         Vezi detalii
@@ -677,7 +681,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Design Logo Minimalist , favicon,icons{" "}
-                            <span className="text-emerald-300/95">(+400€)</span>
+                            <span className="text-emerald-300/95">+400€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Crearea unei identități vizuale moderne, livrată în
@@ -687,7 +691,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Design Premium Extra{" "}
-                            <span className="text-emerald-300/95">(+150€)</span>
+                            <span className="text-emerald-300/95">+150€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Animații avansate, micro-interacțiuni luxury și
@@ -697,7 +701,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Copywriting Profesional{" "}
-                            <span className="text-emerald-300/95">(+150€)</span>
+                            <span className="text-emerald-300/95">+150€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Scriu textele pentru tine, folosind tehnici de
@@ -717,7 +721,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Sistem Rezervări / Calendar{" "}
-                            <span className="text-emerald-300/95">(+300€)</span>
+                            <span className="text-emerald-300/95">+300€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Automatizare completă pentru programări, sincronizată
@@ -727,7 +731,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Formular Contact Avansat{" "}
-                            <span className="text-emerald-300/95">(+100€)</span>
+                            <span className="text-emerald-300/95">+100€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Câmpuri personalizate, logică condiționată și
@@ -737,7 +741,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Integrare WhatsApp, Email, Instagram &amp; Maps{" "}
-                            <span className="text-emerald-300/95">(+100€)</span>
+                            <span className="text-emerald-300/95">+100€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Pachet de contact rapid (buton plutitor WhatsApp +
@@ -757,7 +761,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Setup Tehnic Complet{" "}
-                            <span className="text-emerald-300/95">(+100€)</span>
+                            <span className="text-emerald-300/95">+100€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Achiziție domeniu .ro, configurare hosting, email
@@ -767,7 +771,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             SEO Local &amp; Google My Business{" "}
-                            <span className="text-emerald-300/95">(+100€)</span>
+                            <span className="text-emerald-300/95">+300€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Optimizare pentru căutările locale și configurarea
@@ -1168,7 +1172,7 @@ export default function Home() {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
               <div>
                 <div className="text-sm font-semibold tracking-wide text-white">
-                  NEXTERAWEB
+                  NEXTERAWEB™
                 </div>
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
                   Ecosisteme digitale complete: magazine online de înaltă performanță, platforme customizate și aplicații mobile, toate integrate prin automatizări inteligente pentru eficiență maximă
