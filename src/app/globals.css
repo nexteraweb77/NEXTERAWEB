@@ -50,6 +50,14 @@ body {
   overflow-anchor: none;
 }
 
+@media (pointer: coarse) {
+  html,
+  body {
+    /* După regulile de mai sus — pe touch preferăm anchoring nativ (scroll mai fluid pe iOS) */
+    overflow-anchor: auto;
+  }
+}
+
 ::selection {
   background-color: var(--selection-bg);
   color: var(--selection-fg);

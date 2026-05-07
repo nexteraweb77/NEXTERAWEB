@@ -58,7 +58,7 @@ Salvează setările, apoi **Redeploy**. Testează site-ul într-o fereastră pri
 3. În browser: **hard refresh** (Ctrl+Shift+R / Cmd+Shift+R) sau fereastră privată.
 4. **Pe iPhone / Android:** Setări Safari / Chrome → Șterge date site pentru `nexteraweb.ro`, sau deschide linkul din fereastră privată — telefonul păstrează deseori HTML vechi separat de desktop.
 
-Codul site-ului folosește **`revalidate` 300 s** pe layout, **`/critical-fallback.css`** din `public/` (URL fix, mereu același) și **middleware** care pune `Cache-Control` scurt pe pagini (nu pe `/_next/static`), ca după deploy CDN-ul să nu țină ani întregi HTML vechi față de chunk-uri noi.
+Codul site-ului folosește **`revalidate` 300 s** pe layout și **`/critical-fallback.css`** din `public/` (URL fix). Middleware-ul face doar redirect **www → apex** (fără header-e Cache-Control, ca să evite probleme pe unele laptopuri / CDN).
 
 ## CDN Hostinger (hCDN) — foarte important
 

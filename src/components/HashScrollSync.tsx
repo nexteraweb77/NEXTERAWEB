@@ -34,11 +34,12 @@ export function HashScrollSync() {
       }
     };
 
+    const coarse = window.matchMedia("(pointer: coarse)").matches;
     const t = window.setTimeout(run, 0);
-    const t2 = window.setTimeout(run, 120);
+    const t2 = coarse ? undefined : window.setTimeout(run, 120);
     return () => {
       window.clearTimeout(t);
-      window.clearTimeout(t2);
+      if (t2 !== undefined) window.clearTimeout(t2);
     };
   }, [pathname]);
 

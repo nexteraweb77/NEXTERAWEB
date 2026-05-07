@@ -25,10 +25,28 @@ function snapshotPointerCoarse() {
   return window.matchMedia("(pointer: coarse)").matches;
 }
 
+type InnerProps = {
+  children: React.ReactNode;
+  className?: string;
+  multiplier: number;
+};
+
+/** Folosește useScroll doar aici — nu se montează pe mobil / reduced motion → mai puțin lag la scroll. */
+function ParallaxMotion({ children, multiplier, className }: InnerProps) {
+  const reduce = useReducedMotion();
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, (v) => (reduce ? 0 : v * multiplier));
+
+  return (
+    <motion.div style={{ y }} className={className}>
+      {children}
+    </motion.div>
+  );
+}
+
 /**
  * Strat decorativ cu parallax foarte discret (stil Apple), legat de scroll global.
- * Pe touch (`pointer: coarse`) parallax-ul e oprit: Safari poate reseta scrollul când
- * un strat cu `transform` se actualizează la sfârșitul derulării cu inertia.
+ * Pe touch (`pointer: coarse`) nu montăm deloc `useScroll` — evită muncă la fiecare frame pe telefon.
  */
 export function ScrollParallaxLayer({
   children,
@@ -41,14 +59,14 @@ export function ScrollParallaxLayer({
     snapshotPointerCoarse,
     () => false,
   );
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, (v) =>
-    reduce || touchPrimary ? 0 : v * multiplier,
-  );
+
+  if (reduce || touchPrimary) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
-    <motion.div style={{ y }} className={className}>
+    <ParallaxMotion multiplier={multiplier} className={className}>
       {children}
-    </motion.div>
+    </ParallaxMotion>
   );
 }

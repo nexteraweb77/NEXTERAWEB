@@ -394,7 +394,7 @@ export default function Home() {
                         <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
                           <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
-                              Cum lucrăm împreună ?
+                              Cum lucrăm împreună
                             </h2>
                           </div>
                           <Link

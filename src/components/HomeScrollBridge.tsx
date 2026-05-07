@@ -50,6 +50,10 @@ function readScrollY(): number {
   return Number.isFinite(y) && y >= 0 ? y : NaN;
 }
 
+function isCoarsePointer() {
+  return window.matchMedia("(pointer: coarse)").matches;
+}
+
 function applyScrollY(y: number) {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const w = window as Window & { __nexteraLenis?: Lenis };
@@ -167,6 +171,16 @@ export function RestoreHomeScroll() {
     const run = () => applyScrollY(y);
     run();
 
+    if (isCoarsePointer()) {
+      const t = window.setTimeout(run, 80);
+      queueMicrotask(() => {
+        sessionStorage.removeItem(STORAGE_KEY);
+      });
+      return () => {
+        window.clearTimeout(t);
+      };
+    }
+
     let innerRaf = 0;
     const outerRaf = requestAnimationFrame(() => {
       innerRaf = requestAnimationFrame(run);
@@ -192,11 +206,12 @@ export function RestoreHomeScroll() {
     const y = restoreTargetRef.current;
     if (y == null) return;
 
-    const delays = [100, 280, 520, 900];
+    const delays = isCoarsePointer() ? [80] : [100, 280, 520, 900];
     const ids = delays.map((ms) => window.setTimeout(() => applyScrollY(y), ms));
+    const doneMs = isCoarsePointer() ? 120 : 950;
     const done = window.setTimeout(() => {
       restoreTargetRef.current = null;
-    }, 950);
+    }, doneMs);
 
     return () => {
       ids.forEach((id) => window.clearTimeout(id));
