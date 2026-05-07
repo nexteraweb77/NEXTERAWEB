@@ -19,31 +19,21 @@ export function Reveal({
   instant = false,
 }: RevealProps) {
   const reduce = useReducedMotion();
-  const isCoarsePointer =
-    typeof window !== "undefined" &&
-    window.matchMedia("(pointer: coarse)").matches;
-
-  const skipMotion = reduce || instant || isCoarsePointer;
+  const skipMotion = reduce || instant;
 
   if (skipMotion) {
     return <div className={className}>{children}</div>;
   }
 
-  const resolvedDelay = isCoarsePointer ? Math.min(delayMs, 80) : delayMs;
-
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: isCoarsePointer ? 16 : 28 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{
-        once: true,
-        margin: isCoarsePointer ? "0px 0px -6% 0px" : "0px 0px -12% 0px",
-        amount: isCoarsePointer ? 0.12 : 0.2,
-      }}
+      viewport={{ once: true, margin: "0px 0px -12% 0px", amount: 0.2 }}
       transition={{
-        duration: isCoarsePointer ? 0.52 : 0.72,
-        delay: resolvedDelay / 1000,
+        duration: 0.72,
+        delay: delayMs / 1000,
         ease: easeApple,
       }}
     >
