@@ -342,7 +342,7 @@ export default function Home() {
                   </div>
 
                   <div id="de-ce-lucrezi" className="scroll-anchor mt-5 sm:mt-6">
-                    <div className="group/cta-duo relative overflow-hidden rounded-[1.75rem] border border-white/[0.055] bg-gradient-to-br from-white/[0.028] via-white/[0.012] to-transparent shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-500 ease-out hover:border-emerald-400/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.28),0_0_0_1px_rgba(16,185,129,0.08),inset_0_1px_0_rgba(255,255,255,0.06)]">
+                    <div className="group/cta-duo relative overflow-hidden rounded-[1.75rem] border border-white/[0.055] bg-gradient-to-br from-white/[0.028] via-white/[0.012] to-transparent shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-sm sm:backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-500 ease-out hover:border-emerald-400/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.28),0_0_0_1px_rgba(16,185,129,0.08),inset_0_1px_0_rgba(255,255,255,0.06)]">
                     <div className="matrix-rain" aria-hidden />
                       <div
                         className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-500/[0.035] blur-[72px] transition-opacity duration-500 group-hover/cta-duo:opacity-90"

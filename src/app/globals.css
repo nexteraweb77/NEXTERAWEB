@@ -325,3 +325,14 @@ html.lenis body {
     animation: none !important;
   }
 }
+
+/* Touch: animația matrix + pseudo-elemente încarcă GPU-ul — oprim pe telefon */
+@media (pointer: coarse) {
+  .matrix-rain::before,
+  .matrix-rain::after {
+    animation: none !important;
+  }
+  .matrix-rain {
+    opacity: 0.06;
+  }
+}
