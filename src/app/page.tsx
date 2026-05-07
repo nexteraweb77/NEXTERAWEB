@@ -66,8 +66,8 @@ export default function Home() {
                     className={`${inter.className} text-pretty text-balance text-[clamp(1.22rem,4.1vw,1.58rem)] font-bold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.24rem,3.85vw,1.62rem)] min-[430px]:text-[1.32rem] min-[430px]:leading-snug sm:text-xl sm:font-semibold sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:font-semibold lg:leading-relaxed lg:text-zinc-100/95`}
                     translate="no"
                   >
-                    Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de
-                    internet !
+                    Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de{" "}
+                    <span className="whitespace-nowrap">internet!</span>
                   </p>
                   <span
                     className="block h-px w-12 shrink-0 rounded-full bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent sm:w-14 lg:hidden"
@@ -140,12 +140,13 @@ export default function Home() {
                 <div
                   className={`${montserrat.className} mt-6 text-left text-[1.05rem] font-light leading-[1.72] tracking-[-0.01em] text-zinc-100 sm:text-lg sm:leading-[1.75]`}
                 >
-                  Nu construiesc doar simple site-uri, ci experiente digitale
-                  gandite sa aduca{" "}
+                  Nu construiesc doar simple site-uri, ci experiențe digitale
+                  gândite să aducă{" "}
                   <strong className="font-semibold text-white">
                     rezultate reale
                   </strong>{" "}
-                  afacerii tale !
+                  afacerii{" "}
+                  <span className="whitespace-nowrap">tale!</span>
                 </div>
 
                 <h2 className="mt-6 text-left text-3xl font-semibold leading-snug tracking-tight text-white sm:text-4xl lg:text-5xl">
@@ -356,7 +357,8 @@ export default function Home() {
                         <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
                           <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
-                              De ce să lucrezi cu mine?
+                              De ce să lucrezi cu{" "}
+                              <span className="whitespace-nowrap">mine?</span>
                             </h2>
                           </div>
                           <Link
@@ -393,7 +395,8 @@ export default function Home() {
                         <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
                           <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
-                              Cum lucrăm împreună?
+                              Cum lucrăm{" "}
+                              <span className="whitespace-nowrap">împreună?</span>
                             </h2>
                           </div>
                           <Link

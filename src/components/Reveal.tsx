@@ -8,11 +8,6 @@ type RevealProps = {
   instant?: boolean;
 };
 
-export function Reveal({
-  children,
-  className,
-  delayMs: _delayMs = 0,
-  instant: _instant = false,
-}: RevealProps) {
+export function Reveal({ children, className }: RevealProps) {
   return <div className={className}>{children}</div>;
 }
