@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   applicationName: siteName,
+  other: {
+    google: "notranslate",
+  },
   keywords: [
     "web design România",
     "web design Brașov",
@@ -106,9 +109,13 @@ export default function RootLayout({
   return (
     <html
       lang="ro"
+      translate="no"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
-      <body className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-clip bg-black text-zinc-100 antialiased">
+      <body
+        translate="no"
+        className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-clip bg-black text-zinc-100 antialiased"
+      >
         <OrganizationJsonLd />
         <SiteProviders>
           <Navbar />

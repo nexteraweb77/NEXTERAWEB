@@ -2,6 +2,7 @@ import { Reveal } from "@/components/Reveal";
 import { ScrollParallaxLayer } from "@/components/ScrollParallaxLayer";
 import { INSTAGRAM_PROFILE_URL } from "@/lib/social-urls";
 import { Inter, Montserrat } from "next/font/google";
+import Link from "next/link";
 import Image from "next/image";
 
 const inter = Inter({
@@ -44,6 +45,7 @@ export default function Home() {
                     alt="NEXTERAWEB logo"
                     width={224}
                     height={224}
+                    sizes="(max-width: 640px) 140px, 160px"
                     className="h-[6.75rem] w-[6.75rem] shrink-0 rounded-full drop-shadow-[0_14px_32px_rgba(0,0,0,0.55)] drop-shadow-[0_0_52px_rgba(45,211,153,0.16)] min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
                     priority
                   />
@@ -62,6 +64,7 @@ export default function Home() {
                 <div className="relative z-0 flex w-full min-w-0 max-w-[min(100%,22rem)] flex-col items-center gap-2.5 max-sm:mt-0 min-[400px]:max-w-[min(100%,24rem)] min-[430px]:max-w-[min(100%,26rem)] sm:mt-0 sm:max-w-[40rem] sm:gap-4 lg:max-w-none lg:items-start lg:gap-5 lg:rounded-2xl lg:border lg:border-white/[0.09] lg:bg-gradient-to-br lg:from-white/[0.04] lg:via-transparent lg:to-emerald-500/[0.055] lg:p-8 lg:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_24px_80px_rgba(0,0,0,0.35)] lg:backdrop-blur-md">
                   <p
                     className={`${inter.className} text-pretty text-balance text-[clamp(1.22rem,4.1vw,1.58rem)] font-bold leading-snug tracking-[-0.018em] text-zinc-100 min-[400px]:text-[clamp(1.24rem,3.85vw,1.62rem)] min-[430px]:text-[1.32rem] min-[430px]:leading-snug sm:text-xl sm:font-semibold sm:leading-snug md:text-[1.35rem] md:leading-snug lg:text-left lg:max-w-xl lg:text-[1.24rem] lg:font-semibold lg:leading-relaxed lg:text-zinc-100/95`}
+                    translate="no"
                   >
                     Dacă site-ul tău nu îți aduce clienți, ai doar o pagină de
                     internet !
@@ -72,6 +75,7 @@ export default function Home() {
                   />
                   <h1
                     className={`${montserrat.className} text-pretty text-balance text-[clamp(1.42rem,4.1vw,1.72rem)] font-light leading-[1.22] tracking-[-0.012em] text-white min-[430px]:text-[clamp(1.5rem,3.6vw,1.82rem)] min-[430px]:leading-snug sm:text-[clamp(1.55rem,3.2vw,1.88rem)] sm:leading-snug md:text-[clamp(1.75rem,2.6vw,2.05rem)] md:leading-tight lg:max-w-xl lg:text-left lg:text-[clamp(1.58rem,2.1vw,2.08rem)] lg:leading-[1.2] lg:tracking-[-0.02em]`}
+                    translate="no"
                   >
                     Construiesc cărți de vizită digitale care emană autoritate și
                     stil
@@ -293,6 +297,7 @@ export default function Home() {
                 <div className="mt-6 w-full space-y-5 sm:mt-7 sm:space-y-5">
                   <div id="portofoliu" className="scroll-anchor">
                     <div className="group relative overflow-hidden rounded-2xl border border-white/[0.1] bg-gradient-to-br from-white/[0.07] via-white/[0.02] to-transparent p-5 shadow-[0_20px_60px_rgba(0,0,0,0.38),inset_0_1px_0_rgba(255,255,255,0.09)] backdrop-blur-md transition duration-500 hover:border-emerald-400/25 hover:shadow-[0_28px_80px_rgba(0,0,0,0.45),0_0_45px_rgba(16,185,129,0.08)] sm:p-6 lg:p-7">
+                    <div className="matrix-rain" aria-hidden />
                       <div
                         className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-emerald-500/[0.14] blur-3xl transition-opacity duration-500 group-hover:opacity-100"
                         aria-hidden
@@ -311,7 +316,7 @@ export default function Home() {
                         >
                           Proiecte care definesc standarde
                         </h2>
-                        <a
+                        <Link
                           href="/portofoliu"
                           className="group/portfolio-cta inline-flex h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-7 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 sm:self-center sm:text-base"
                         >
@@ -330,13 +335,14 @@ export default function Home() {
                               d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                             />
                           </svg>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
 
                   <div id="de-ce-lucrezi" className="scroll-anchor mt-5 sm:mt-6">
                     <div className="group/cta-duo relative overflow-hidden rounded-[1.75rem] border border-white/[0.055] bg-gradient-to-br from-white/[0.028] via-white/[0.012] to-transparent shadow-[0_4px_24px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-500 ease-out hover:border-emerald-400/20 hover:shadow-[0_12px_40px_rgba(0,0,0,0.28),0_0_0_1px_rgba(16,185,129,0.08),inset_0_1px_0_rgba(255,255,255,0.06)]">
+                    <div className="matrix-rain" aria-hidden />
                       <div
                         className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-emerald-500/[0.035] blur-[72px] transition-opacity duration-500 group-hover/cta-duo:opacity-90"
                         aria-hidden
@@ -353,7 +359,7 @@ export default function Home() {
                               De ce să lucrezi cu mine ?
                             </h2>
                           </div>
-                          <a
+                          <Link
                             href="/abilitati"
                             className="group/afla-neon inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 lg:self-center"
                           >
@@ -372,7 +378,7 @@ export default function Home() {
                                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                               />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
 
@@ -390,7 +396,7 @@ export default function Home() {
                               Cum lucrăm împreună ?
                             </h2>
                           </div>
-                          <a
+                          <Link
                             href="/cum-lucram"
                             className="group/afla-neon2 inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 lg:self-center"
                           >
@@ -409,7 +415,7 @@ export default function Home() {
                                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                               />
                             </svg>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -786,12 +792,12 @@ export default function Home() {
 
               <Reveal delayMs={80}>
                 <div className="glass-panel flex h-full flex-col justify-center border-white/10 p-6">
-                  <a
+                  <Link
                     href="/asigurare-digitala"
                     className="inline-flex min-h-16 w-full items-center justify-center rounded-2xl border border-amber-300/35 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 px-8 py-4 text-center text-lg font-semibold text-black shadow-[0_0_0_1px_rgba(251,191,36,0.35),0_22px_70px_rgba(251,191,36,0.22)] transition hover:brightness-105 sm:text-xl"
                   >
                     Asigurare Digitala
-                  </a>
+                  </Link>
                 </div>
               </Reveal>
             </div>

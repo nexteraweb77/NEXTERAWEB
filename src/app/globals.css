@@ -100,6 +100,25 @@ html.lenis body {
   }
 }
 
+/* Matrix-style “code rain” — folosit ca overlay decorativ (fără impact pe layout) */
+@keyframes matrix-rain-drift {
+  0% {
+    transform: translate3d(0, -18%, 0);
+  }
+  100% {
+    transform: translate3d(0, 18%, 0);
+  }
+}
+
+@keyframes matrix-rain-scan {
+  0% {
+    transform: translate3d(-12%, 0, 0);
+  }
+  100% {
+    transform: translate3d(12%, 0, 0);
+  }
+}
+
 @layer utilities {
   /* Glassmorphism — panouri principale */
   .glass-panel {
@@ -217,6 +236,72 @@ html.lenis body {
       drop-shadow(0 0 26px rgba(34, 197, 94, 0.38))
       drop-shadow(0 0 44px rgba(163, 230, 53, 0.18));
   }
+
+  .matrix-rain {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.14;
+    mix-blend-mode: screen;
+    filter: blur(0.2px) saturate(1.15);
+    mask-image: radial-gradient(
+      120% 90% at 50% 35%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.85) 40%,
+      rgba(0, 0, 0, 0) 78%
+    );
+    -webkit-mask-image: radial-gradient(
+      120% 90% at 50% 35%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.85) 40%,
+      rgba(0, 0, 0, 0) 78%
+    );
+  }
+
+  .matrix-rain::before {
+    content: "";
+    position: absolute;
+    inset: -24% -10%;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(16, 185, 129, 0.0) 0px,
+        rgba(16, 185, 129, 0.0) 14px,
+        rgba(16, 185, 129, 0.55) 15px,
+        rgba(16, 185, 129, 0.0) 16px,
+        rgba(16, 185, 129, 0.0) 30px
+      ),
+      repeating-linear-gradient(
+        180deg,
+        rgba(16, 185, 129, 0.0) 0px,
+        rgba(16, 185, 129, 0.0) 22px,
+        rgba(52, 211, 153, 0.22) 23px,
+        rgba(16, 185, 129, 0.0) 24px,
+        rgba(16, 185, 129, 0.0) 42px
+      );
+    opacity: 0.9;
+    animation: matrix-rain-drift 7.5s linear infinite alternate;
+  }
+
+  .matrix-rain::after {
+    content: "01001101 01100001 01110100 01110010 01101001 01111000  101001 0110110 110010 0110111  0x1A 0x2F 0x7C  01101001 01101110 01100110 01101111  1101 0011 0101  0xAF 0x3E";
+    position: absolute;
+    inset: -30% -20%;
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.55;
+    letter-spacing: 0.22em;
+    color: rgba(52, 211, 153, 0.35);
+    white-space: pre-wrap;
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+    animation: matrix-rain-scan 9.5s ease-in-out infinite alternate;
+    text-shadow:
+      0 0 10px rgba(16, 185, 129, 0.14),
+      0 0 24px rgba(16, 185, 129, 0.08);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -225,5 +310,10 @@ html.lenis body {
     background-position: 35% 50%;
     filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.4))
       drop-shadow(0 0 22px rgba(34, 197, 94, 0.22));
+  }
+
+  .matrix-rain::before,
+  .matrix-rain::after {
+    animation: none !important;
   }
 }
