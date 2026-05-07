@@ -56,6 +56,7 @@ Salvează setările, apoi **Redeploy**. Testează site-ul într-o fereastră pri
 1. **Curăță cache-ul CDN** în hPanel (Hostinger / hCDN): după fiecare deploy nou, un HTML vechi putea cere fișiere `/_next/static/...` care nu mai există → lipsesc CSS-urile. Caută „Purge cache” / „Clear cache” pentru domeniu.
 2. Deschide mereu **`https://nexteraweb.ro`** (fără `www`). Până când `www` e legat corect de aceeași aplicație în panou, `www` poate da eroare (ex. 503).
 3. În browser: **hard refresh** (Ctrl+Shift+R / Cmd+Shift+R) sau fereastră privată.
+4. **Pe iPhone / Android:** Setări Safari / Chrome → Șterge date site pentru `nexteraweb.ro`, sau deschide linkul din fereastră privată — telefonul păstrează deseori HTML vechi separat de desktop.
 
-Codul site-ului folosește **`revalidate` 300 s** pe layout ca HTML-ul să nu rămână „înghețat” ani la CDN față de chunk-urile noi.
+Codul site-ului folosește **`revalidate` 300 s** pe layout ca HTML-ul să nu rămână „înghețat” ani la CDN față de chunk-urile noi. În plus, un **CSS mic în `<head>`** ascunde nav-ul desktop pe ecran mic chiar dacă Tailwind nu s-a încărcat (evită „ServiciiPortofoliu…” lipit).
 

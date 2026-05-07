@@ -96,7 +96,10 @@ export function Navbar() {
             </Link>
           )}
 
-          <div className="hidden items-center gap-7 md:flex">
+          <div
+            className="hidden items-center gap-7 md:flex"
+            data-nextera-desktop-nav
+          >
             {items.map((it) => (
               <motion.a
                 key={it.id}
@@ -112,6 +115,7 @@ export function Navbar() {
 
           <button
             type="button"
+            data-nextera-mobile-toggle
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md transition hover:bg-white/10 md:hidden"
             aria-label={open ? "Închide meniul" : "Deschide meniul"}
@@ -142,6 +146,8 @@ export function Navbar() {
       </nav>
 
       <div
+        data-nextera-mobile-panel
+        data-open={open ? "true" : "false"}
         className={[
           "md:hidden",
           open ? "block" : "hidden",

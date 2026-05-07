@@ -5,6 +5,7 @@ import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
 import { Navbar } from "@/components/Navbar";
 import { SiteProviders } from "@/components/SiteProviders";
 import { getMetadataBase, getSiteUrl } from "@/lib/site-url";
+import { criticalNavbarFallbackCss } from "@/lib/critical-fallback-css";
 
 /**
  * Fără asta, Next poate marca HTML-ul cu s-maxage foarte mare la CDN (ex. 1 an).
@@ -120,6 +121,12 @@ export default function RootLayout({
       translate="no"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
+      <head>
+        <style
+          dangerouslySetInnerHTML={{ __html: criticalNavbarFallbackCss }}
+          suppressHydrationWarning
+        />
+      </head>
       <body
         translate="no"
         className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-clip bg-black text-zinc-100 antialiased"
