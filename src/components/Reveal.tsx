@@ -19,15 +19,15 @@ export function Reveal({
   instant = false,
 }: RevealProps) {
   const reduce = useReducedMotion();
-  const skipMotion = reduce || instant;
+  const isCoarsePointer =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
+
+  const skipMotion = reduce || instant || isCoarsePointer;
 
   if (skipMotion) {
     return <div className={className}>{children}</div>;
   }
-
-  const isCoarsePointer =
-    typeof window !== "undefined" &&
-    window.matchMedia("(pointer: coarse)").matches;
 
   const resolvedDelay = isCoarsePointer ? Math.min(delayMs, 80) : delayMs;
 
