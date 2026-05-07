@@ -2,6 +2,9 @@
   "name": "nexteraweb",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "postinstall": "node scripts/patch-next-network-host.cjs",
     "dev": "node scripts/patch-next-network-host.cjs && next dev -H 127.0.0.1",
