@@ -39,7 +39,7 @@ const child = useStandalone
   : spawn(process.execPath, [nextBin, "start", "-H", "0.0.0.0", "-p", port], {
       stdio: "inherit",
       cwd: root,
-      env: process.env,
+      env,
     });
 
 child.on("exit", (code, signal) => {
