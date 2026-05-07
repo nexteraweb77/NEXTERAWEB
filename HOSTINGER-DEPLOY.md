@@ -27,6 +27,18 @@ Copiază valorile de mai jos în panoul aplicației Node / Web App. **Comanda de
 
 `npm run start` rulează `scripts/start-production.cjs`: pornește build-ul **standalone** (CSS și `public` incluse) și forțează ascultarea pe `0.0.0.0` ca să meargă prin proxy-ul Hostinger.
 
+Compilarea folosește **`next build --webpack`** (nu Turbopack), ca să fie mai stabilă pe serverele Hostinger / CI cu memorie limitată.
+
+## Dacă compilarea tot pică pe Hostinger
+
+În **Variabile de mediu** adaugă (build + runtime sau doar build, după ce permite panoul):
+
+| Cheie | Valoare |
+|-------|---------|
+| `NODE_OPTIONS` | `--max-old-space-size=4096` |
+
+Apoi redeploy.
+
 ## Variabile de mediu
 
 | Cheie | Valoare |
