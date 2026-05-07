@@ -47,8 +47,7 @@ export default function CumLucramPage() {
 
         <div className="section-y relative mx-auto max-w-4xl px-4 sm:px-6">
           <h1 className="text-3xl font-semibold tracking-tight text-white">
-            Cum lucrăm{" "}
-            <span className="whitespace-nowrap">împreună?</span>
+            Cum lucrăm împreună ?
           </h1>
 
           <div className="mt-10 grid grid-cols-1 gap-4">

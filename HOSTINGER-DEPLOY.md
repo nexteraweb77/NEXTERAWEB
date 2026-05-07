@@ -58,5 +58,13 @@ Salvează setările, apoi **Redeploy**. Testează site-ul într-o fereastră pri
 3. În browser: **hard refresh** (Ctrl+Shift+R / Cmd+Shift+R) sau fereastră privată.
 4. **Pe iPhone / Android:** Setări Safari / Chrome → Șterge date site pentru `nexteraweb.ro`, sau deschide linkul din fereastră privată — telefonul păstrează deseori HTML vechi separat de desktop.
 
-Codul site-ului folosește **`revalidate` 300 s** pe layout ca HTML-ul să nu rămână „înghețat” ani la CDN față de chunk-urile noi. În plus, un **CSS mic în `<head>`** ascunde nav-ul desktop pe ecran mic chiar dacă Tailwind nu s-a încărcat (evită „ServiciiPortofoliu…” lipit).
+Codul site-ului folosește **`revalidate` 300 s** pe layout, **`/critical-fallback.css`** din `public/` (URL fix, mereu același) și **middleware** care pune `Cache-Control` scurt pe pagini (nu pe `/_next/static`), ca după deploy CDN-ul să nu țină ani întregi HTML vechi față de chunk-uri noi.
+
+## CDN Hostinger (hCDN) — foarte important
+
+Dacă ai activat **CDN** pentru domeniu:
+
+1. După **fiecare deploy**: rulează **Purge / Clear entire cache** pentru `nexteraweb.ro` în hPanel. Altfel edge-ul poate servi **HTML vechi** cu linkuri către CSS-uri care **nu mai există** pe server → telefon alb, laptop fără stil.
+2. Asigură-te că traficul către aplicația **Node / Next** nu e înlocuit cu un „site static” vechi; rutele `/_next/*` trebuie să ajungă la același backend care rulează `npm run start`.
+3. Dacă tot nu merge: **dezactivează temporar CDN-ul** pentru domeniu, purge, testează — dacă fără CDN merge, problema e **doar la setările cache CDN**; ajustezi cu suportul Hostinger.
 

@@ -5,7 +5,6 @@ import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
 import { Navbar } from "@/components/Navbar";
 import { SiteProviders } from "@/components/SiteProviders";
 import { getMetadataBase, getSiteUrl } from "@/lib/site-url";
-import { criticalNavbarFallbackCss } from "@/lib/critical-fallback-css";
 
 /**
  * Fără asta, Next poate marca HTML-ul cu s-maxage foarte mare la CDN (ex. 1 an).
@@ -122,10 +121,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <head>
-        <style
-          dangerouslySetInnerHTML={{ __html: criticalNavbarFallbackCss }}
-          suppressHydrationWarning
-        />
+        {/* eslint-disable-next-line @next/next/no-css-tags -- URL fix în public/ pentru CDN + HTML vechi; nu poate fi import bundlat */}
+        <link rel="stylesheet" href="/critical-fallback.css" fetchPriority="high" />
       </head>
       <body
         translate="no"
