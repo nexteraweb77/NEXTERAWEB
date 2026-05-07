@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 const siteDescription =
   "Web design și site-uri moderne în Brașov, România — viziune transformată în experiențe digitale memorabile: design luxury, SEO și strategie pentru branduri care aleg performanță, claritate și ritm de creștere.";
 
-const siteName = "NEXTERAWEB";
+const siteName = "NEXTERAWEB™";
 const defaultTitle =
-  "NEXTERAWEB | Creare Site-uri Web Profesionale în România";
+  `${siteName} | Creare Site-uri Web Profesionale în România`;
 
 const canonicalRoot = new URL("/", getMetadataBase()).href;
 
