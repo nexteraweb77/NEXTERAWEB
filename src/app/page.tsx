@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <div id="top" className="min-h-screen bg-black text-zinc-100">
       <main className="pt-[calc(4rem+env(safe-area-inset-top,0px))]">
+        <div className="w-full lg:mx-auto lg:max-w-[520px]">
         <section className="relative overflow-x-clip overflow-y-visible pb-10 max-sm:pb-6 sm:pb-16 lg:pb-20">
           <ScrollParallaxLayer
             className="pointer-events-none absolute inset-0"
@@ -701,7 +702,7 @@ export default function Home() {
                         <div>
                           <div className="text-base font-medium text-white">
                             Copywriting Profesional{" "}
-                            <span className="text-emerald-300/95">+150€</span>
+                            <span className="text-emerald-300/95">+200€</span>
                           </div>
                           <p className="mt-2 text-base leading-relaxed text-zinc-400">
                             Scriu textele pentru tine, folosind tehnici de
@@ -1428,6 +1429,7 @@ export default function Home() {
             </div>
           </div>
         </footer>
+        </div>
       </main>
     </div>
   );
