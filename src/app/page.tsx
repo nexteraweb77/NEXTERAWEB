@@ -21,7 +21,6 @@ export default function Home() {
   return (
     <div id="top" className="min-h-screen bg-black text-zinc-100">
       <main className="pt-[calc(4rem+env(safe-area-inset-top,0px))]">
-        <div className="w-full lg:mx-auto lg:max-w-[520px]">
         <section className="relative overflow-x-clip overflow-y-visible pb-10 max-sm:pb-6 sm:pb-16 lg:pb-20">
           <ScrollParallaxLayer
             className="pointer-events-none absolute inset-0"
@@ -1429,7 +1428,6 @@ export default function Home() {
             </div>
           </div>
         </footer>
-        </div>
       </main>
     </div>
   );
