@@ -310,15 +310,15 @@ export default function Home() {
                         className="pointer-events-none absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-white/[0.07] to-transparent"
                         aria-hidden
                       />
-                      <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+                      <div className="relative flex flex-col gap-5 max-sm:flex-row max-sm:items-center max-sm:justify-between max-sm:gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
                         <h2
-                          className={`${montserrat.className} text-left text-[1.35rem] font-semibold leading-tight tracking-[-0.02em] text-transparent sm:text-2xl lg:text-[1.8rem] bg-gradient-to-br from-white via-zinc-100 to-zinc-500 bg-clip-text`}
+                          className={`${montserrat.className} min-w-0 text-left text-[1.35rem] font-semibold leading-tight tracking-[-0.02em] text-transparent sm:text-2xl lg:text-[1.8rem] bg-gradient-to-br from-white via-zinc-100 to-zinc-500 bg-clip-text`}
                         >
                           Proiecte care definesc standarde
                         </h2>
                         <Link
                           href="/portofoliu"
-                          className="group/portfolio-cta inline-flex h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-7 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 sm:self-center sm:text-base"
+                          className="group/portfolio-cta inline-flex h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-7 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 max-sm:self-auto sm:self-center sm:text-base"
                         >
                           Vezi aici
                           <svg
@@ -353,15 +353,15 @@ export default function Home() {
                       />
 
                       <div className="relative px-5 py-5 sm:px-6 sm:py-6 lg:px-8 lg:py-7">
-                        <div className="flex flex-col gap-5 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-                          <div className="max-w-2xl">
+                        <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                          <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
                               De ce să lucrezi cu mine ?
                             </h2>
                           </div>
                           <Link
                             href="/abilitati"
-                            className="group/afla-neon inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 lg:self-center"
+                            className="group/afla-neon inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 max-sm:self-auto max-sm:mt-0.5 lg:self-center"
                           >
                             Află aici
                             <svg
@@ -390,15 +390,15 @@ export default function Home() {
                           className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/[0.12] to-transparent sm:inset-x-8"
                           aria-hidden
                         />
-                        <div className="flex flex-col gap-5 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-                          <div className="max-w-2xl">
+                        <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                          <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
                               Cum lucrăm împreună ?
                             </h2>
                           </div>
                           <Link
                             href="/cum-lucram"
-                            className="group/afla-neon2 inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 lg:self-center"
+                            className="group/afla-neon2 inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 max-sm:self-auto max-sm:mt-0.5 lg:self-center"
                           >
                             Află aici
                             <svg
@@ -663,10 +663,6 @@ export default function Home() {
                           Personalizează-ți proiectul cu funcționalități care
                           accelerează creșterea
                         </p>
-                        <p className="mt-2 text-sm font-normal italic leading-relaxed text-zinc-400 sm:text-base sm:text-zinc-500">
-                          *Prețuri dinamice, în funcție de amploarea și detaliile
-                          proiectului.*
-                        </p>
                       </div>
                       <div className="inline-flex shrink-0 items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md transition group-open:bg-white/12">
                         Vezi detalii
@@ -677,6 +673,10 @@ export default function Home() {
                     </div>
                   </summary>
                   <div className="mt-6 space-y-8 border-t border-white/10 pt-6">
+                    <p className="text-sm font-normal italic leading-relaxed text-zinc-400 sm:text-base sm:text-zinc-500">
+                      *Prețuri dinamice, în funcție de amploarea și detaliile
+                      proiectului*
+                    </p>
                     <div>
                       <h4
                         className={`${montserrat.className} mb-4 text-base font-semibold uppercase tracking-[0.12em] text-white sm:text-lg sm:tracking-[0.1em]`}
