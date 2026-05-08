@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -101,15 +100,13 @@ export function Navbar() {
             data-nextera-desktop-nav
           >
             {items.map((it) => (
-              <motion.a
+              <a
                 key={it.id}
                 href={`/#${it.id}`}
-                className="text-sm font-medium text-zinc-300 link-hover-soft"
-                whileHover={{ y: -1 }}
-                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                className="text-sm font-medium text-zinc-300 link-hover-soft transition-transform duration-200 ease-out hover:-translate-y-px"
               >
                 {it.label}
-              </motion.a>
+              </a>
             ))}
           </div>
 

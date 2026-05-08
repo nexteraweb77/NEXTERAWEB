@@ -136,6 +136,7 @@ export default function Home() {
               <div
                 id="servicii"
                 className="scroll-anchor mt-10 w-full max-w-xl max-sm:mt-12 sm:mt-11"
+                style={{ contentVisibility: "auto" }}
               >
                 <div
                   className={`${montserrat.className} mt-6 text-left text-[1.05rem] font-light leading-[1.72] tracking-[-0.01em] text-zinc-100 sm:text-lg sm:leading-[1.75]`}
@@ -220,7 +221,7 @@ export default function Home() {
                           <div className="relative mt-1 shrink-0 sm:mt-1.5">
                             <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10 transition group-hover/service:ring-emerald-400/35 group-open/service:ring-emerald-400/40">
                               <span className="relative inline-flex h-3 w-3 items-center justify-center">
-                                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400/35" />
+                                <span className="absolute hidden h-full w-full animate-ping rounded-full bg-emerald-400/35 sm:inline-flex" />
                                 <span className="nex-online-dot relative inline-flex h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_1px_rgba(16,185,129,0.35),0_0_18px_rgba(16,185,129,0.35)] [animation:nex-online-pulse_1.8s_ease-in-out_infinite]" />
                               </span>
                             </span>
@@ -357,7 +358,12 @@ export default function Home() {
                         <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
                           <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
-                              De ce să lucrezi cu mine ?
+                              <span className="block text-balance">
+                                Păi… citește mai jos, e scurt.
+                              </span>
+                              <span className="mt-1.5 block text-balance text-[0.88em] font-normal leading-snug text-zinc-300/95 sm:mt-2 sm:text-[0.9em]">
+                                Un gest fin, înainte să alegi.
+                              </span>
                             </h2>
                           </div>
                           <Link

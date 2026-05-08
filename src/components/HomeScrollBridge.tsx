@@ -96,12 +96,9 @@ export function SaveHomeScrollBeforeSubpages() {
   useEffect(() => {
     const onPointerDown = (e: PointerEvent) => trySaveHomeScrollBeforeSubpageNav(e);
     const onClick = (e: MouseEvent) => trySaveHomeScrollBeforeSubpageNav(e);
-    const onTouchStart = (e: TouchEvent) =>
-      trySaveHomeScrollBeforeSubpageNav(e as unknown as Event);
 
     document.addEventListener("pointerdown", onPointerDown, true);
     document.addEventListener("click", onClick, true);
-    document.addEventListener("touchstart", onTouchStart, { capture: true, passive: true });
 
     const w = window as Window & {
       navigation?: EventTarget & {
@@ -124,7 +121,6 @@ export function SaveHomeScrollBeforeSubpages() {
     return () => {
       document.removeEventListener("pointerdown", onPointerDown, true);
       document.removeEventListener("click", onClick, true);
-      document.removeEventListener("touchstart", onTouchStart, { capture: true });
       if (nav?.removeEventListener) {
         nav.removeEventListener("navigate", onNavigate);
       }

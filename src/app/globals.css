@@ -326,7 +326,7 @@ html.lenis body {
   }
 }
 
-/* Touch: animația matrix + pseudo-elemente încarcă GPU-ul — oprim pe telefon */
+/* Touch: matrix, blur mai ușor pe glass, tagline fără animație infinită — scroll mai fluid */
 @media (pointer: coarse) {
   .matrix-rain::before,
   .matrix-rain::after {
@@ -334,5 +334,19 @@ html.lenis body {
   }
   .matrix-rain {
     opacity: 0.06;
+  }
+
+  .glass-panel,
+  .glass-panel-strong,
+  .glass-panel-accent {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .tagline-neon-shimmer {
+    animation: none !important;
+    background-position: 35% 50%;
+    filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.45))
+      drop-shadow(0 0 22px rgba(34, 197, 94, 0.22));
   }
 }
