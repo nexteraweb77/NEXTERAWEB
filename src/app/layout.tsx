@@ -122,6 +122,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <head>
+        <link
+          rel="preload"
+          href="/logo-hero.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
         <style
           // Fallback vizual fără Tailwind (URL stabil) — inline ca să evităm un request extra care poate mări LCP/CLS.
           // Scop: doar fundal + nav responsive, pentru cazul rar în care CSS-ul hashed din /_next/static lipsește din cache.
