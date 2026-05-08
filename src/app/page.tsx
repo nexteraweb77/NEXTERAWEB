@@ -1113,7 +1113,7 @@ export default function Home() {
                     href={INSTAGRAM_PROFILE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Deschide profilul Instagram @amos.rapfet"
+                    aria-label="Deschide profilul Instagram @amos.rapcod"
                     className="group relative flex flex-col items-center gap-3 overflow-hidden p-6 text-center transition-all duration-300 ease-out will-change-transform motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:hover:scale-100 motion-reduce:hover:shadow-none sm:p-7
                     hover:-translate-y-1 hover:z-10 hover:bg-white/[0.07] hover:shadow-[0_16px_48px_rgba(0,0,0,0.38),0_0_0_1px_rgba(221,42,123,0.22),inset_0_1px_0_rgba(255,255,255,0.07)]
                     focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dd2a7b]/45
@@ -1269,7 +1269,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      @amos.rapfet
+                      @amos.rapcod
                     </a>
                   </div>
                   <div>Locație: Brașov</div>
@@ -1423,7 +1423,7 @@ export default function Home() {
                     </span>
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[1.05rem] font-semibold leading-snug tracking-[-0.02em] text-white sm:text-lg lg:text-xl">
                       <span className="bg-gradient-to-r from-emerald-200 via-teal-200 to-cyan-100 bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(52,211,153,0.18)] transition group-hover:from-emerald-100 group-hover:via-teal-100 group-hover:to-cyan-50">
-                        @amos.rapfet
+                        @amos.rapcod
                       </span>
                       <span className="hidden font-light text-zinc-600 sm:inline">
                         —
