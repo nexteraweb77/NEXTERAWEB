@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { OrganizationJsonLd } from "@/components/OrganizationJsonLd";
 import { Navbar } from "@/components/Navbar";
+import { ScrollRestoration } from "@/components/ScrollRestoration";
 import { SiteProviders } from "@/components/SiteProviders";
 import { getMetadataBase, getSiteUrl } from "@/lib/site-url";
 
@@ -131,6 +132,7 @@ export default function RootLayout({
         <OrganizationJsonLd />
         <SiteProviders>
           <Navbar />
+          <ScrollRestoration />
           {children}
         </SiteProviders>
       </body>
