@@ -1,3 +1,4 @@
+import { DeferredGoogleMap } from "@/components/DeferredGoogleMap";
 import { Reveal } from "@/components/Reveal";
 import { ScrollParallaxLayer } from "@/components/ScrollParallaxLayer";
 import { INSTAGRAM_PROFILE_URL } from "@/lib/social-urls";
@@ -1175,16 +1176,11 @@ export default function Home() {
                       Deschide în Google Maps →
                     </a>
                   </div>
-                  <div className="glass-inset relative aspect-[5/3] w-full overflow-hidden sm:aspect-[2.4/1]">
-                    <iframe
-                      title="Hartă Brașov"
-                      className="pointer-events-auto absolute inset-0 block h-full w-full border-0 grayscale-[0.2] contrast-[1.05] transition hover:grayscale-0"
-                      src="https://www.google.com/maps?q=Bra%C8%99ov%2C%20Romania&output=embed"
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      scrolling="no"
-                    />
-                  </div>
+                  <DeferredGoogleMap
+                    title="Hartă Brașov"
+                    src="https://www.google.com/maps?q=Bra%C8%99ov%2C%20Romania&output=embed"
+                    className="glass-inset relative aspect-[5/3] w-full overflow-hidden sm:aspect-[2.4/1]"
+                  />
                 </div>
               </div>
             </Reveal>

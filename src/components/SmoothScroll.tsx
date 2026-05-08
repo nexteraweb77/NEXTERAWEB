@@ -57,60 +57,82 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     let postLayout = 0;
     let visibilityHandler: (() => void) | null = null;
 
-    try {
-      lenis = new Lenis({
-        lerp: 0.078,
-        smoothWheel: true,
-        anchors: true,
-      });
+    let idleCallbackId: number | undefined;
+    /** În DOM `setTimeout` întoarce `number`; cu `@types/node` uneori apare `NodeJS.Timeout`. */
+    let idleTimeoutId: number | undefined;
 
-      const w = window as Window & { __nexteraLenis?: Lenis };
-      w.__nexteraLenis = lenis;
-
-      if (!hasHash) {
-        syncLenisTop(lenis);
-      } else {
-        syncLenisResize(lenis);
-        const id = window.location.hash.slice(1);
-        requestAnimationFrame(() => {
-          lenis?.scrollTo(`#${id}`, {
-            immediate: true,
-            force: true,
-            programmatic: true,
-          });
+    const startLenis = () => {
+      try {
+        lenis = new Lenis({
+          lerp: 0.078,
+          smoothWheel: true,
+          anchors: true,
         });
-      }
 
-      const raf = (time: number) => {
-        // Când tab-ul e ascuns, nu mai rulăm raf continuu (reduce CPU + micro-stutter la revenire).
-        if (!document.hidden) {
-          lenis?.raf(time);
-        }
-        rafId = requestAnimationFrame(raf);
-      };
-      rafId = requestAnimationFrame(raf);
+        const w = window as Window & { __nexteraLenis?: Lenis };
+        w.__nexteraLenis = lenis;
 
-      visibilityHandler = () => {
-        if (!lenis) return;
-        if (!document.hidden) {
-          // La revenire, sincronizăm măsurătorile; evită “salturi” în primele frame-uri.
-          syncLenisResize(lenis);
-        }
-      };
-      document.addEventListener("visibilitychange", visibilityHandler, { passive: true });
-
-      postLayout = requestAnimationFrame(() => {
-        if (!lenis) return;
-        syncLenisResize(lenis);
-        if (!window.location.hash?.length) {
+        if (!hasHash) {
           syncLenisTop(lenis);
+        } else {
+          syncLenisResize(lenis);
+          const id = window.location.hash.slice(1);
+          requestAnimationFrame(() => {
+            lenis?.scrollTo(`#${id}`, {
+              immediate: true,
+              force: true,
+              programmatic: true,
+            });
+          });
         }
+
+        const raf = (time: number) => {
+          // Când tab-ul e ascuns, nu mai rulăm raf continuu (reduce CPU + micro-stutter la revenire).
+          if (!document.hidden) {
+            lenis?.raf(time);
+          }
+          rafId = requestAnimationFrame(raf);
+        };
+        rafId = requestAnimationFrame(raf);
+
+        visibilityHandler = () => {
+          if (!lenis) return;
+          if (!document.hidden) {
+            // La revenire, sincronizăm măsurătorile; evită “salturi” în primele frame-uri.
+            syncLenisResize(lenis);
+          }
+        };
+        document.addEventListener("visibilitychange", visibilityHandler, {
+          passive: true,
+        });
+
+        postLayout = requestAnimationFrame(() => {
+          if (!lenis) return;
+          syncLenisResize(lenis);
+          if (!window.location.hash?.length) {
+            syncLenisTop(lenis);
+          }
+        });
+      } catch (err) {
+        console.error("[SmoothScroll] Lenis nu a pornit — folosim scroll nativ.", err);
+      }
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      idleCallbackId = window.requestIdleCallback(() => startLenis(), {
+        timeout: 1800,
       });
-    } catch (err) {
-      console.error("[SmoothScroll] Lenis nu a pornit — folosim scroll nativ.", err);
+    } else {
+      idleTimeoutId = window.setTimeout(() => startLenis(), 120) as unknown as number;
     }
 
     return () => {
+      if (idleCallbackId != null && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleCallbackId);
+      }
+      if (idleTimeoutId != null) {
+        window.clearTimeout(idleTimeoutId);
+      }
       cancelAnimationFrame(postLayout);
       cancelAnimationFrame(rafId);
       if (visibilityHandler) {

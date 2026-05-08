@@ -122,8 +122,27 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} min-h-full antialiased`}
     >
       <head>
-        {/* eslint-disable-next-line @next/next/no-css-tags -- URL fix în public/ pentru CDN + HTML vechi; nu poate fi import bundlat */}
-        <link rel="stylesheet" href="/critical-fallback.css" fetchPriority="high" />
+        <style
+          // Fallback vizual fără Tailwind (URL stabil) — inline ca să evităm un request extra care poate mări LCP/CLS.
+          // Scop: doar fundal + nav responsive, pentru cazul rar în care CSS-ul hashed din /_next/static lipsește din cache.
+          dangerouslySetInnerHTML={{
+            __html: `
+html{background-color:#030303;color:#e4e4e7}
+body{margin:0;min-height:100dvh;background-color:#030303}
+main{min-height:50vh}
+@media (max-width:767.98px){
+  [data-nextera-desktop-nav]{display:none!important}
+  [data-nextera-mobile-toggle]{display:inline-flex!important}
+  [data-nextera-mobile-panel][data-open="false"]{display:none!important}
+  [data-nextera-mobile-panel][data-open="true"]{display:block!important}
+}
+@media (min-width:768px){
+  [data-nextera-mobile-toggle],[data-nextera-mobile-panel]{display:none!important}
+  [data-nextera-desktop-nav]{display:flex!important;align-items:center;gap:1.75rem}
+}
+            `,
+          }}
+        />
       </head>
       <body
         translate="no"
