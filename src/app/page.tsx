@@ -48,12 +48,10 @@ export default function Home() {
                     width={224}
                     height={224}
                     sizes="(max-width: 640px) 112px, (max-width: 1024px) 140px, 160px"
-                    className="h-[6.75rem] w-[6.75rem] shrink-0 rounded-full drop-shadow-[0_14px_32px_rgba(0,0,0,0.55)] drop-shadow-[0_0_52px_rgba(45,211,153,0.16)] min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
+                    className="hero-logo-mark h-[6.75rem] w-[6.75rem] shrink-0 object-contain min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
                     fetchPriority="high"
                     priority
                     unoptimized
-                    placeholder="blur"
-                    blurDataURL="data:image/webp;base64,UklGRjIDAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSDQCAAAFkG3btilXq6zYtm3btm3byeu1bdu2Edu27aRcFX5EREwAAHBtak2IcfagF5FcTJkFrknsHOyLkeATwgqwSatrEouiXZhe+jR9Dw9KSFlemM6aXqYJyjC5O6bWWhg0AABVSc+trZpK5hQIE03VeFjfq5YBADil0maW6rcGIhewPG+4+Y14F/7VAwBaJAzX187ZJR0MPJNf+vTQqoKsUzQA8DL9OCVM7mXbKRF7vyPFBWdFnJpfA/CUNb4So4kKzEpI0idneGh9LIK14LNFMLJ7NI4j2NFE1ivQGuqduMYxAkfMnwbwkT3PEjeotQlvqF52M7n1w7Z5FMJo76Bw4iNdl97ilq70h+ywfO6l/dQwK1DgIj5j6r8kc0ZSjSd0Zszp+lrVJpbY4yFxkVU6/sJ4CJO6JPVEhTUa24z7QOVt8lW+gsmbf+E4ESFxR6W8esvMqs4J+V3ko5vyUbqv4QlzAQUy/pfjAeqhcjU8bnSyJoR8F3R9yjnV1F/DR5NVMv+gLSWit67Hq66cyZ2/9SDrIY7ji0sj3eqr1dZiyiNdsbu9gIjWu2ncCL2b7tU4s1cc6giH94nlH8mA0vCifeulApEzied6L4GCEQ5gfhlhAaA9pbfejwEKycc9S9sE/kBUVTPsJZiqs4fKlTAM6ijfhIUcvq+GgmQjtgB4edyJCpNzZDEelkLHVFPzFiC2tgAAgebSkVdWWgEk8z/l7zwD9kVsASAIvPyU8JW5jn420JBsAABWUDgg2AAAAPAFAJ0BKhgAGAA+7W6uUqmmJCKoCAEwHYllAKPQCB2ArhgrQtK+W/0MeEwzQjd+DJh8RyxtACvAAP55qtOpK8uQjuOtzcp2SDegDslgDDJH1J7Wqae50O0xOj15nQZE7L60tN+z/09w5aMXf+shD2HHN5fE76sF4HjtdJWLgPPjSKpyPFpw+xiB1sYsmrhHQCanyT/haU0fNg8aZlOHdRW4GWN+1wvquy2ajqg39OmE2Jt43MHwUwlNsRsPIUdqPCAqF1WoAdwIvfTFwyEy5VSL/qSRnskAAA=="
                   />
                   <div
                     className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
