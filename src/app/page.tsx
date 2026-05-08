@@ -1422,7 +1422,7 @@ export default function Home() {
                       creat de
                     </span>
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[1.05rem] font-semibold leading-snug tracking-[-0.02em] text-white sm:text-lg lg:text-xl">
-                      <span className="bg-gradient-to-r from-emerald-200 via-teal-200 to-cyan-100 bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(52,211,153,0.18)] transition group-hover:from-emerald-100 group-hover:via-teal-100 group-hover:to-cyan-50">
+                      <span className="bg-gradient-to-r from-[#f58529] via-[#dd2a7b] to-[#515bd4] bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(221,42,123,0.22)] transition group-hover:from-[#f9a03f] group-hover:via-[#ff4aa2] group-hover:to-[#6a6ff2]">
                         @amos.rapcod
                       </span>
                       <span className="hidden font-light text-zinc-600 sm:inline">
