@@ -11,10 +11,11 @@ const inter = Inter({
   display: "swap",
 });
 
+/** Hero + secțiuni: doar greutățile folosite — mai puține fișiere font la încărcare (LCP pe mobil). */
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "500", "600", "700"],
 });
 
 const WHATSAPP_CHAT_URL = "/whatsapp";
@@ -42,12 +43,13 @@ export default function Home() {
               <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-5 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:items-start lg:gap-x-14 lg:gap-y-6 lg:text-left xl:gap-x-16">
                 <div className="relative z-10 flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-3 max-sm:pb-0 sm:max-w-sm sm:gap-3.5 lg:w-full lg:max-w-full lg:min-w-0 lg:items-start lg:gap-4">
                   <Image
-                    src="/logo.png"
+                    src="/logo-hero.webp"
                     alt="NEXTERAWEB logo"
                     width={224}
                     height={224}
-                    sizes="(max-width: 640px) 140px, 160px"
+                    sizes="(max-width: 640px) 112px, (max-width: 1024px) 140px, 160px"
                     className="h-[6.75rem] w-[6.75rem] shrink-0 rounded-full drop-shadow-[0_14px_32px_rgba(0,0,0,0.55)] drop-shadow-[0_0_52px_rgba(45,211,153,0.16)] min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
+                    fetchPriority="high"
                     priority
                   />
                   <div
