@@ -1385,7 +1385,7 @@ export default function Home() {
                     className="pointer-events-none absolute -left-10 -bottom-12 h-28 w-28 rounded-full bg-zinc-400/[0.07] blur-2xl"
                   />
                   <div className="relative flex flex-col gap-1">
-                    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-zinc-500 sm:text-[0.7rem]">
+                    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white sm:text-[0.7rem]">
                       drepturi
                     </span>
                     <p className="text-pretty text-[1.05rem] font-semibold leading-snug tracking-[-0.02em] text-zinc-100 sm:text-lg lg:text-xl">
@@ -1418,7 +1418,7 @@ export default function Home() {
                     className="pointer-events-none absolute -right-6 -top-10 h-24 w-24 rounded-full bg-emerald-400/10 blur-2xl transition-opacity duration-300 group-hover:opacity-100 sm:h-28 sm:w-28"
                   />
                   <div className="relative flex flex-col gap-1">
-                    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-zinc-500 sm:text-[0.7rem]">
+                    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white sm:text-[0.7rem]">
                       creat de
                     </span>
                     <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-[1.05rem] font-semibold leading-snug tracking-[-0.02em] text-white sm:text-lg lg:text-xl">
