@@ -358,12 +358,7 @@ export default function Home() {
                         <div className="flex flex-col gap-5 max-sm:flex-row max-sm:items-start max-sm:justify-between max-sm:gap-4 sm:gap-5 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
                           <div className="max-w-2xl max-sm:min-w-0 max-sm:flex-1">
                             <h2 className={`${inter.className} text-xl font-medium tracking-[-0.02em] text-zinc-50 sm:text-2xl lg:text-[1.65rem] lg:leading-snug`}>
-                              <span className="block text-balance">
-                                Păi… citește mai jos, e scurt.
-                              </span>
-                              <span className="mt-1.5 block text-balance text-[0.88em] font-normal leading-snug text-zinc-300/95 sm:mt-2 sm:text-[0.9em]">
-                                Un gest fin, înainte să alegi.
-                              </span>
+                              De ce să lucrezi cu mine ?
                             </h2>
                           </div>
                           <Link
