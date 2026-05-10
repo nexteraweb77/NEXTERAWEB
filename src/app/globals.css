@@ -127,16 +127,6 @@ html.lenis body {
   }
 }
 
-/* Hero logo — „ploaie” subtilă fără să suprascrie mirror/transform pe aripi */
-@keyframes hero-matrix-bg-drift {
-  0% {
-    background-position: 48% 34%;
-  }
-  100% {
-    background-position: 52% 66%;
-  }
-}
-
 @layer utilities {
   /* Glassmorphism — panouri principale */
   .glass-panel {
@@ -234,65 +224,6 @@ html.lenis body {
       drop-shadow(0 0 1px rgba(255, 255, 255, 0.055));
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
-
-  /* Imagine PNG în lateralul logo-ului; mască spre centru + spre exterior */
-  .hero-matrix-accent-wrap {
-    position: absolute;
-    inset: -38% -105% -38% -105%;
-    pointer-events: none;
-    z-index: 0;
-    isolation: isolate;
-  }
-
-  .hero-matrix-accent-wing {
-    position: absolute;
-    top: 50%;
-    width: min(42vw, 10rem);
-    height: 155%;
-    transform: translateY(-50%);
-    background-image: url("/hero-matrix-accent.png");
-    background-repeat: no-repeat;
-    background-size: 220% 220%;
-    background-position: 50% 40%;
-    opacity: 0.17;
-    mix-blend-mode: screen;
-    filter: blur(1px) saturate(1.06);
-    will-change: background-position;
-    animation: hero-matrix-bg-drift 22s ease-in-out infinite alternate;
-  }
-
-  .hero-matrix-accent-wing-left {
-    right: calc(50% + 0.35rem);
-    mask-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.55) 52%,
-      rgba(0, 0, 0, 0) 88%
-    );
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.55) 52%,
-      rgba(0, 0, 0, 0) 88%
-    );
-  }
-
-  .hero-matrix-accent-wing-right {
-    left: calc(50% + 0.35rem);
-    transform: translateY(-50%) scaleX(-1);
-    mask-image: linear-gradient(
-      270deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.55) 52%,
-      rgba(0, 0, 0, 0) 88%
-    );
-    -webkit-mask-image: linear-gradient(
-      270deg,
-      rgba(0, 0, 0, 0.95) 0%,
-      rgba(0, 0, 0, 0.55) 52%,
-      rgba(0, 0, 0, 0) 88%
-    );
   }
 
   .tagline-neon-shimmer {
@@ -401,11 +332,6 @@ html.lenis body {
   .matrix-rain::after {
     animation: none !important;
   }
-
-  .hero-matrix-accent-wing {
-    animation: none !important;
-    background-position: 50% 48%;
-  }
 }
 
 /* Touch: matrix redus + blur mai ușor pe glass (scroll); brand neon rămâne animat și pe telefon */
@@ -416,12 +342,6 @@ html.lenis body {
   }
   .matrix-rain {
     opacity: 0.06;
-  }
-
-  /* Accent hero: mai discret pe touch, dar păstrăm drift-ul lent pe fundal */
-  .hero-matrix-accent-wing {
-    opacity: 0.11;
-    filter: blur(1.25px) saturate(1.04);
   }
 
   .glass-panel,

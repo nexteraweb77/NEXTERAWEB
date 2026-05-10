@@ -1,5 +1,4 @@
 import { DeferredGoogleMap } from "@/components/DeferredGoogleMap";
-import { HeroLogoMatrixAccent } from "@/components/HeroLogoMatrixAccent";
 import { HomeReturnLink } from "@/components/HomeReturnLink";
 import { Reveal } from "@/components/Reveal";
 import { ScrollParallaxLayer } from "@/components/ScrollParallaxLayer";
@@ -44,20 +43,17 @@ export default function Home() {
               <div className="max-sm:-translate-y-2 translate-y-0 sm:translate-y-0 sm:-translate-y-2.5">
               <div className="mx-auto flex w-full max-w-[min(100%,56rem)] flex-col items-center gap-7 text-center max-[360px]:px-0.5 max-sm:gap-5 sm:gap-8 lg:grid lg:max-w-5xl lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:items-start lg:gap-x-14 lg:gap-y-6 lg:text-left xl:gap-x-16">
                 <div className="relative z-10 flex w-full max-w-[min(100%,20rem)] flex-col items-center gap-3 max-sm:pb-0 sm:max-w-sm sm:gap-3.5 lg:w-full lg:max-w-full lg:min-w-0 lg:items-start lg:gap-4">
-                  <div className="relative isolate mx-auto w-fit shrink-0 lg:mx-0">
-                    <HeroLogoMatrixAccent />
-                    <Image
-                      src="/logo-hero.webp"
-                      alt="NEXTERAWEB logo"
-                      width={224}
-                      height={224}
-                      sizes="(max-width: 640px) 112px, (max-width: 1024px) 140px, 160px"
-                      className="hero-logo-mark relative z-10 h-[6.75rem] w-[6.75rem] shrink-0 object-contain min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
-                      fetchPriority="high"
-                      priority
-                      unoptimized
-                    />
-                  </div>
+                  <Image
+                    src="/logo-hero.webp"
+                    alt="NEXTERAWEB logo"
+                    width={224}
+                    height={224}
+                    sizes="(max-width: 640px) 112px, (max-width: 1024px) 140px, 160px"
+                    className="hero-logo-mark h-[6.75rem] w-[6.75rem] shrink-0 object-contain min-[400px]:h-[7.75rem] min-[400px]:w-[7.75rem] sm:h-[8.75rem] sm:w-[8.75rem] lg:h-40 lg:w-40"
+                    fetchPriority="high"
+                    priority
+                    unoptimized
+                  />
                   <div
                     className={`${montserrat.className} w-full text-balance text-center text-[clamp(1.86rem,8.2vw,3.05rem)] font-bold uppercase leading-[1.12] tracking-[0.08em] min-[400px]:tracking-[0.11em] sm:leading-none sm:text-[clamp(1.62rem,3.55vw,2.48rem)] sm:tracking-[0.14em] lg:text-left lg:text-[2.08rem] lg:tracking-[0.18em] xl:text-[2.38rem]`}
                   >
