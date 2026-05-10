@@ -1,4 +1,5 @@
 import { DeferredGoogleMap } from "@/components/DeferredGoogleMap";
+import { HomeReturnLink } from "@/components/HomeReturnLink";
 import { Reveal } from "@/components/Reveal";
 import { ScrollParallaxLayer } from "@/components/ScrollParallaxLayer";
 import { INSTAGRAM_PROFILE_URL } from "@/lib/social-urls";
@@ -322,8 +323,9 @@ export default function Home() {
                         >
                           Proiecte care definesc standarde
                         </h2>
-                        <Link
+                        <HomeReturnLink
                           href="/portofoliu"
+                          returnAnchorId="portofoliu"
                           className="group/portfolio-cta inline-flex h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-7 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 max-sm:self-auto sm:self-center sm:text-base"
                         >
                           Vezi aici
@@ -341,7 +343,7 @@ export default function Home() {
                               d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                             />
                           </svg>
-                        </Link>
+                        </HomeReturnLink>
                       </div>
                     </div>
                   </div>
@@ -365,8 +367,9 @@ export default function Home() {
                               De ce să lucrezi cu mine?
                             </h2>
                           </div>
-                          <Link
+                          <HomeReturnLink
                             href="/abilitati"
+                            returnAnchorId="de-ce-lucrezi"
                             className="group/afla-neon inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 max-sm:self-auto max-sm:mt-0.5 lg:self-center"
                           >
                             Află aici
@@ -384,7 +387,7 @@ export default function Home() {
                                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                               />
                             </svg>
-                          </Link>
+                          </HomeReturnLink>
                         </div>
                       </div>
 
@@ -402,8 +405,9 @@ export default function Home() {
                               Cum lucrăm împreună?
                             </h2>
                           </div>
-                          <Link
+                          <HomeReturnLink
                             href="/cum-lucram"
+                            returnAnchorId="cum-lucram-cta"
                             className="group/afla-neon2 inline-flex h-11 shrink-0 items-center justify-center gap-2 self-start rounded-full border border-emerald-400/35 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-teal-500/10 px-6 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(16,185,129,0.2),0_10px_36px_rgba(16,185,129,0.15)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-emerald-400/55 hover:from-emerald-500/30 hover:via-emerald-500/15 hover:shadow-[0_14px_44px_rgba(16,185,129,0.22)] active:translate-y-0 max-sm:self-auto max-sm:mt-0.5 lg:self-center"
                           >
                             Află aici
@@ -421,7 +425,7 @@ export default function Home() {
                                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                               />
                             </svg>
-                          </Link>
+                          </HomeReturnLink>
                         </div>
                       </div>
                     </div>
@@ -922,7 +926,7 @@ export default function Home() {
                       <p
                         className={`${inter.className} relative text-pretty text-center text-[1.05rem] font-normal leading-[1.85] tracking-[0.01em] text-zinc-200 sm:text-left sm:text-[1.08rem] sm:leading-[1.88]`}
                       >
-                        Muzica m-a invatat ritmul, iar studiile in mecatronica mi-au
+                        Muzica m-a invatat ritmul, iar studiile in mecatronică mi-au
                         format precizia. Pentru mine, un site premium este un mecanism fin,
                         unde tehnologia întâlnește arta. Totul începe cu un gând, un
                         cuvânt, un pixel sau un cod, așezat exact unde îi este locul. Așa

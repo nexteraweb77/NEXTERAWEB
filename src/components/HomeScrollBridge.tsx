@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef } from "react";
 
 const STORAGE_KEY = "nextera-home-scroll-y";
+const RETURN_ANCHOR_KEY = "nextera-home-return-anchor";
 
 const SUBPAGE_PATHS = new Set([
   "/abilitati",
@@ -50,6 +51,12 @@ function readScrollY(): number {
   return Number.isFinite(y) && y >= 0 ? y : NaN;
 }
 
+function readReturnAnchorId(): string {
+  const raw = sessionStorage.getItem(RETURN_ANCHOR_KEY);
+  if (!raw) return "";
+  return raw.replace(/^#/, "").trim();
+}
+
 function isCoarsePointer() {
   return window.matchMedia("(pointer: coarse)").matches;
 }
@@ -67,6 +74,26 @@ function applyScrollY(y: number) {
   } else {
     window.scrollTo({ top: y, behavior: reduce ? "auto" : "instant" });
   }
+}
+
+function applyScrollToId(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const w = window as Window & { __nexteraLenis?: Lenis };
+  const lenis = w.__nexteraLenis;
+
+  if (lenis) {
+    lenis.scrollTo(`#${id}`, {
+      immediate: reduce,
+      force: true,
+      programmatic: true,
+    });
+    return;
+  }
+
+  el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
 }
 
 function trySaveHomeScrollBeforeSubpageNav(e: Event) {
@@ -136,7 +163,7 @@ export function SaveHomeScrollBeforeSubpages() {
  */
 export function RestoreHomeScroll() {
   const pathname = usePathname();
-  const restoreTargetRef = useRef<number | null>(null);
+  const restoreTargetRef = useRef<{ y?: number; id?: string } | null>(null);
 
   // useLayoutEffect: înainte de paint + înainte de scroll-ul implicit al segmentelor Next.
   // Nu ștergem sessionStorage la început: în Strict Mode useEffect/useLayoutEffect rulează de două ori;
@@ -152,8 +179,36 @@ export function RestoreHomeScroll() {
     if (hash === "top") {
       restoreTargetRef.current = null;
       sessionStorage.removeItem(STORAGE_KEY);
+      sessionStorage.removeItem(RETURN_ANCHOR_KEY);
       applyScrollY(0);
       return;
+    }
+
+    const returnId = readReturnAnchorId();
+    if (returnId) {
+      restoreTargetRef.current = { id: returnId };
+      const run = () => applyScrollToId(returnId);
+      run();
+
+      // curățăm imediat: dacă userul apasă back/forward repetat, nu vrem să “prindem” vechiul target.
+      queueMicrotask(() => {
+        sessionStorage.removeItem(RETURN_ANCHOR_KEY);
+        sessionStorage.removeItem(STORAGE_KEY);
+      });
+
+      if (isCoarsePointer()) {
+        const t = window.setTimeout(run, 80);
+        return () => window.clearTimeout(t);
+      }
+
+      const r1 = requestAnimationFrame(() => run());
+      const t1 = window.setTimeout(run, 120);
+      const t2 = window.setTimeout(run, 280);
+      return () => {
+        cancelAnimationFrame(r1);
+        window.clearTimeout(t1);
+        window.clearTimeout(t2);
+      };
     }
 
     const y = readScrollY();
@@ -162,7 +217,7 @@ export function RestoreHomeScroll() {
       return;
     }
 
-    restoreTargetRef.current = y;
+    restoreTargetRef.current = { y };
 
     const run = () => applyScrollY(y);
     run();
@@ -199,12 +254,17 @@ export function RestoreHomeScroll() {
   // Next / Lenis pot reseta scroll-ul după layout — reaplicăm de câteva ori.
   useEffect(() => {
     if (pathname !== "/") return;
-    const y = restoreTargetRef.current;
-    if (y == null) return;
+    const target = restoreTargetRef.current;
+    if (!target) return;
+
+    const run = () => {
+      if (target.id) applyScrollToId(target.id);
+      else if (typeof target.y === "number") applyScrollY(target.y);
+    };
 
     const delays = isCoarsePointer() ? [80] : [100, 280, 520, 900];
-    const ids = delays.map((ms) => window.setTimeout(() => applyScrollY(y), ms));
-    const doneMs = isCoarsePointer() ? 120 : 950;
+    const ids = delays.map((ms) => window.setTimeout(run, ms));
+    const doneMs = isCoarsePointer() ? 140 : 950;
     const done = window.setTimeout(() => {
       restoreTargetRef.current = null;
     }, doneMs);
