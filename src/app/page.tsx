@@ -1204,9 +1204,6 @@ export default function Home() {
                 <p className="mt-3 text-sm leading-7 text-zinc-400">
                   Ecosisteme digitale complete: magazine online de înaltă performanță, platforme customizate și aplicații mobile, toate integrate prin automatizări inteligente pentru eficiență maximă
                 </p>
-                <p className="mt-2 text-sm font-medium leading-6 text-zinc-200/90">
-                  Toate preturile afisate contin TVA
-                </p>
               </div>
 
               <div>
