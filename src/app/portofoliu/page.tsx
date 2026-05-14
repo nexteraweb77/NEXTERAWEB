@@ -47,8 +47,8 @@ const projects = [
 
 export default function PortofoliuPage() {
   return (
-    <div className="min-h-screen bg-black text-zinc-100">
-      <main className="relative min-h-screen overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))]">
+    <div className="min-h-dvh bg-black text-zinc-100">
+      <main className="relative overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))] pb-[max(2.5rem,env(safe-area-inset-bottom,0px))]">
         <ScrollParallaxLayer
           className="pointer-events-none absolute inset-0"
           multiplier={0.03}
@@ -58,7 +58,7 @@ export default function PortofoliuPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_60%)]" />
         </ScrollParallaxLayer>
 
-        <div className="section-y relative mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="section-y relative mx-auto max-w-5xl overflow-anchor-none px-4 pb-[max(4.5rem,calc(2rem+env(safe-area-inset-bottom,0px)))] sm:px-6 sm:pb-24">
           <Reveal>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-emerald-400/90">
               Proiecte live
@@ -135,13 +135,15 @@ export default function PortofoliuPage() {
             </p>
           </Reveal>
 
-          <Link
-            href="/"
-            scroll={false}
-            className="btn-glass-outline mx-auto mt-8 flex h-11 w-fit items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md"
-          >
-            Înapoi la site
-          </Link>
+          <div className="mt-8 scroll-mt-24 pb-[max(0.75rem,env(safe-area-inset-bottom,0px))]">
+            <Link
+              href="/"
+              scroll={false}
+              className="btn-glass-outline mx-auto flex h-11 w-fit items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md"
+            >
+              Înapoi la site
+            </Link>
+          </div>
         </div>
       </main>
     </div>

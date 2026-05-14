@@ -10,8 +10,8 @@ const buyBtnClass =
 
 export default function AsigurareDigitalaPage() {
   return (
-    <div className="min-h-screen bg-black text-zinc-100">
-      <main className="relative min-h-screen overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))]">
+    <div className="min-h-dvh bg-black text-zinc-100">
+      <main className="relative overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))] pb-[max(2.5rem,env(safe-area-inset-bottom,0px))]">
         <ScrollParallaxLayer
           className="pointer-events-none absolute inset-0"
           multiplier={0.034}
@@ -21,7 +21,7 @@ export default function AsigurareDigitalaPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_60%)]" />
         </ScrollParallaxLayer>
 
-        <div className="section-y relative mx-auto max-w-3xl px-4 sm:px-6">
+        <div className="section-y relative mx-auto max-w-3xl overflow-anchor-none px-4 pb-[max(4.5rem,calc(2rem+env(safe-area-inset-bottom,0px)))] sm:px-6 sm:pb-24">
           <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Asigurare Digitala
           </h1>
@@ -221,13 +221,15 @@ export default function AsigurareDigitalaPage() {
             </details>
           </div>
 
-          <Link
-            href="/"
-            scroll={false}
-            className="btn-glass-outline mt-10 inline-flex h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md"
-          >
-            Înapoi la site
-          </Link>
+          <div className="mt-10 scroll-mt-24 pb-[max(0.75rem,env(safe-area-inset-bottom,0px))]">
+            <Link
+              href="/"
+              scroll={false}
+              className="btn-glass-outline inline-flex h-11 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] backdrop-blur-md"
+            >
+              Înapoi la site
+            </Link>
+          </div>
         </div>
       </main>
     </div>
