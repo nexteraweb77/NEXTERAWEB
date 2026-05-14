@@ -334,14 +334,30 @@ html.lenis body {
   }
 }
 
-/* Touch: matrix redus + blur mai ușor pe glass (scroll); brand neon rămâne animat și pe telefon */
+/* Touch: matrix redus + blur mai ușor pe glass (scroll); animații grele oprite pe telefon */
 @media (pointer: coarse) {
   .matrix-rain::before,
   .matrix-rain::after {
     animation: none !important;
   }
   .matrix-rain {
-    opacity: 0.06;
+    display: none;
+  }
+
+  .tagline-neon-shimmer {
+    animation: none !important;
+    background-position: 35% 50%;
+    filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.4))
+      drop-shadow(0 0 22px rgba(34, 197, 94, 0.22));
+  }
+
+  .will-change-transform {
+    will-change: auto;
+  }
+
+  footer {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .glass-panel,

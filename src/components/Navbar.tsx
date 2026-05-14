@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 type NavItem = { id: string; label: string };
 
@@ -14,6 +14,16 @@ const items: NavItem[] = [
   { id: "despre", label: "Despre" },
   { id: "contact", label: "Contact" },
 ];
+
+function subscribePointerCoarse(onStoreChange: () => void) {
+  const mq = window.matchMedia("(pointer: coarse)");
+  mq.addEventListener("change", onStoreChange);
+  return () => mq.removeEventListener("change", onStoreChange);
+}
+
+function snapshotPointerCoarse() {
+  return window.matchMedia("(pointer: coarse)").matches;
+}
 
 function scrollPageToTop() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -36,22 +46,37 @@ export function Navbar() {
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const touchPrimary = useSyncExternalStore(
+    subscribePointerCoarse,
+    snapshotPointerCoarse,
+    () => false,
+  );
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      const next = window.scrollY > 8;
+      setScrolled((prev) => (prev === next ? prev : next));
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const headerSurface = touchPrimary
+    ? scrolled
+      ? "bg-black/88 shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
+      : "bg-black/0"
+    : scrolled
+      ? "bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+      : "bg-black/0 backdrop-blur-0";
+
   return (
     <header
       className={[
         "fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)]",
-        "border-b border-white/10 transition-[background,box-shadow,backdrop-filter] duration-500",
-        scrolled
-          ? "bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
-          : "bg-black/0 backdrop-blur-0",
+        "border-b border-white/10",
+        touchPrimary ? "transition-[background,box-shadow] duration-300" : "transition-[background,box-shadow,backdrop-filter] duration-500",
+        headerSurface,
       ].join(" ")}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))]">
@@ -114,7 +139,7 @@ export function Navbar() {
             type="button"
             data-nextera-mobile-toggle
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.06] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md transition hover:bg-white/10 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-black/55 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition hover:bg-black/70 md:hidden md:bg-white/[0.06] md:backdrop-blur-md md:hover:bg-white/10"
             aria-label={open ? "Închide meniul" : "Deschide meniul"}
             aria-expanded={open}
           >
@@ -148,7 +173,7 @@ export function Navbar() {
         className={[
           "md:hidden",
           open ? "block" : "hidden",
-          "border-t border-white/10 bg-black/50 backdrop-blur-2xl",
+          "border-t border-white/10 bg-black/90 md:bg-black/50 md:backdrop-blur-2xl",
         ].join(" ")}
       >
         <div className="mx-auto max-w-6xl py-4 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))]">
