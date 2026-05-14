@@ -30,7 +30,11 @@ export function HashScrollSync() {
           programmatic: true,
         });
       } else {
-        el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+        const coarse = window.matchMedia("(pointer: coarse)").matches;
+        el.scrollIntoView({
+          behavior: reduce || coarse ? "auto" : "smooth",
+          block: "start",
+        });
       }
     };
 

@@ -93,7 +93,7 @@ function applyScrollToId(id: string) {
     return;
   }
 
-  el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  el.scrollIntoView({ behavior: reduce || isCoarsePointer() ? "auto" : "smooth", block: "start" });
 }
 
 function trySaveHomeScrollBeforeSubpageNav(e: Event) {

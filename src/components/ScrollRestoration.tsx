@@ -25,6 +25,11 @@ function scrollToY(y: number) {
   window.scrollTo({ top: y, behavior: "auto" });
 }
 
+function isCoarsePointer() {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(pointer: coarse)").matches;
+}
+
 /**
  * Next App Router nu restaurează mereu scroll-ul la back/forward în SPA.
  * Salvăm poziția pe fiecare "page" și o restaurăm doar pe navigare via history.
@@ -38,6 +43,16 @@ export function ScrollRestoration() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    if (isCoarsePointer()) {
+      try {
+        window.history.scrollRestoration = "auto";
+      } catch {
+        // ignore
+      }
+      return;
+    }
+
     try {
       window.history.scrollRestoration = "manual";
     } catch {
@@ -53,7 +68,7 @@ export function ScrollRestoration() {
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined" || isCoarsePointer()) return;
 
     // save previous page scroll
     const prevKey = lastKeyRef.current;

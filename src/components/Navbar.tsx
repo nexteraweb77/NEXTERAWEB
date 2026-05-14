@@ -53,6 +53,8 @@ export function Navbar() {
   );
 
   useEffect(() => {
+    if (touchPrimary) return;
+
     const onScroll = () => {
       const next = window.scrollY > 8;
       setScrolled((prev) => (prev === next ? prev : next));
@@ -60,12 +62,10 @@ export function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [touchPrimary]);
 
   const headerSurface = touchPrimary
-    ? scrolled
-      ? "bg-black/88 shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
-      : "bg-black/0"
+    ? "bg-black/92 shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
     : scrolled
       ? "bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
       : "bg-black/0 backdrop-blur-0";
@@ -75,7 +75,9 @@ export function Navbar() {
       className={[
         "fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)]",
         "border-b border-white/10",
-        touchPrimary ? "transition-[background,box-shadow] duration-300" : "transition-[background,box-shadow,backdrop-filter] duration-500",
+        touchPrimary
+          ? ""
+          : "transition-[background,box-shadow,backdrop-filter] duration-500",
         headerSurface,
       ].join(" ")}
     >

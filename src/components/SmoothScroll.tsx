@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect } from "react";
-import Lenis from "lenis";
-import "lenis/dist/lenis.css";
+import type Lenis from "lenis";
 
 function scrollDocumentToTop() {
   window.scrollTo(0, 0);
@@ -27,11 +26,19 @@ function isFinePointerDevice() {
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   useLayoutEffect(() => {
+    if (typeof window === "undefined") return;
+
+    if (!isFinePointerDevice()) {
+      if ("scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "auto";
+      }
+      return;
+    }
+
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "auto";
     }
     const hasHash = Boolean(window.location.hash?.length > 1);
-    /* Un singur sync aici — un al doilea scroll în rAF putea reseta poziția după ce userul începuse deja să deruleze (în special pe mobil). */
     if (!hasHash) {
       scrollDocumentToTop();
     }
@@ -39,11 +46,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      return;
-    }
-
-    if (!isFinePointerDevice()) {
+    if (reduce || !isFinePointerDevice()) {
       return;
     }
 
@@ -56,14 +59,20 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     let rafId = 0;
     let postLayout = 0;
     let visibilityHandler: (() => void) | null = null;
+    let cancelled = false;
 
     let idleCallbackId: number | undefined;
-    /** În DOM `setTimeout` întoarce `number`; cu `@types/node` uneori apare `NodeJS.Timeout`. */
     let idleTimeoutId: number | undefined;
 
-    const startLenis = () => {
+    const startLenis = async () => {
       try {
-        lenis = new Lenis({
+        const [{ default: LenisCtor }] = await Promise.all([
+          import("lenis"),
+          import("lenis/dist/lenis.css"),
+        ]);
+        if (cancelled) return;
+
+        lenis = new LenisCtor({
           lerp: 0.078,
           smoothWheel: true,
           anchors: true,
@@ -87,7 +96,6 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
         }
 
         const raf = (time: number) => {
-          // Când tab-ul e ascuns, nu mai rulăm raf continuu (reduce CPU + micro-stutter la revenire).
           if (!document.hidden) {
             lenis?.raf(time);
           }
@@ -96,11 +104,8 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
         rafId = requestAnimationFrame(raf);
 
         visibilityHandler = () => {
-          if (!lenis) return;
-          if (!document.hidden) {
-            // La revenire, sincronizăm măsurătorile; evită “salturi” în primele frame-uri.
-            syncLenisResize(lenis);
-          }
+          if (!lenis || document.hidden) return;
+          syncLenisResize(lenis);
         };
         document.addEventListener("visibilitychange", visibilityHandler, {
           passive: true,
@@ -119,14 +124,19 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     };
 
     if (typeof window.requestIdleCallback === "function") {
-      idleCallbackId = window.requestIdleCallback(() => startLenis(), {
+      idleCallbackId = window.requestIdleCallback(() => {
+        void startLenis();
+      }, {
         timeout: 1800,
       });
     } else {
-      idleTimeoutId = window.setTimeout(() => startLenis(), 120) as unknown as number;
+      idleTimeoutId = window.setTimeout(() => {
+        void startLenis();
+      }, 120) as unknown as number;
     }
 
     return () => {
+      cancelled = true;
       if (idleCallbackId != null && typeof window.cancelIdleCallback === "function") {
         window.cancelIdleCallback(idleCallbackId);
       }
