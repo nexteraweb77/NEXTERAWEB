@@ -20,7 +20,8 @@
 }
 
 html {
-  overflow-x: clip;
+  overflow-x: hidden;
+  overflow-y: auto;
   /* Evită „saltul” vizual pe iOS când se termină inertia / anchoring + layout */
   overflow-anchor: none;
   scroll-behavior: auto;
@@ -46,7 +47,7 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
+  overflow: visible;
   overflow-anchor: none;
 }
 
@@ -337,9 +338,26 @@ html.lenis body {
 @media (pointer: coarse) {
   html,
   body {
-    overflow-x: hidden;
     text-rendering: auto;
     touch-action: pan-y;
+  }
+
+  body {
+    min-height: 0;
+  }
+
+  body:has(.subpage-shell) {
+    display: block;
+  }
+
+  .subpage-shell {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .subpage-shell > main {
+    min-height: auto;
+    overflow: visible;
   }
 
   [class*="backdrop-blur"] {
@@ -382,14 +400,5 @@ html.lenis body {
   .glass-panel-accent {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-  }
-
-  .subpage-shell {
-    min-height: auto;
-  }
-
-  .subpage-shell > main {
-    min-height: auto;
-    overflow-x: visible;
   }
 }

@@ -135,7 +135,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
 html{background-color:#030303;color:#e4e4e7}
-body{margin:0;min-height:100dvh;background-color:#030303}
+body{margin:0;background-color:#030303}
 main{min-height:50vh}
 @media (max-width:767.98px){
   [data-nextera-desktop-nav]{display:none!important}
@@ -153,7 +153,7 @@ main{min-height:50vh}
       </head>
       <body
         translate="no"
-        className="touch-manipulation font-sans min-h-full flex flex-col overflow-x-clip bg-black text-zinc-100 antialiased"
+        className="touch-manipulation font-sans min-h-full flex flex-col bg-black text-zinc-100 antialiased"
       >
         <OrganizationJsonLd />
         <SiteProviders>

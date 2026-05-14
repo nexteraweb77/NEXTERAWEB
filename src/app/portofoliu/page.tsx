@@ -48,7 +48,7 @@ const projects = [
 export default function PortofoliuPage() {
   return (
     <div className="subpage-shell bg-black text-zinc-100">
-      <main className="relative overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))] pb-[max(2.5rem,env(safe-area-inset-bottom,0px))]">
+      <main className="relative pt-[calc(4rem+env(safe-area-inset-top,0px))] pb-[max(2.5rem,env(safe-area-inset-bottom,0px))]">
         <ScrollParallaxLayer
           className="pointer-events-none absolute inset-0"
           multiplier={0.03}
