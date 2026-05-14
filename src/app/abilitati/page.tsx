@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AbilitatiPage() {
   return (
-    <div className="min-h-dvh bg-black text-zinc-100">
+    <div className="subpage-shell bg-black text-zinc-100">
       <main className="relative overflow-x-clip pt-[calc(4rem+env(safe-area-inset-top,0px))] pb-[max(2.5rem,env(safe-area-inset-bottom,0px))]">
         <ScrollParallaxLayer
           className="pointer-events-none absolute inset-0"

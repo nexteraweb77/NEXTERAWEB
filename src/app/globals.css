@@ -53,8 +53,7 @@ body {
 @media (pointer: coarse) {
   html,
   body {
-    /* După regulile de mai sus — pe touch preferăm anchoring nativ (scroll mai fluid pe iOS) */
-    overflow-anchor: auto;
+    overflow-anchor: none;
   }
 }
 
@@ -383,5 +382,14 @@ html.lenis body {
   .glass-panel-accent {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+  }
+
+  .subpage-shell {
+    min-height: auto;
+  }
+
+  .subpage-shell > main {
+    min-height: auto;
+    overflow-x: visible;
   }
 }
