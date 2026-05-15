@@ -1,17 +1,19 @@
 import { getSiteUrl } from "@/lib/site-url";
-import { getStripe, getSubscriptionPriceId } from "@/lib/stripe";
+import { getStripe, resolveSubscriptionPriceId } from "@/lib/stripe";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
 type CheckoutBody = {
+  /** protect | growth | partner — mapat la STRIPE_PRICE_* din env (Faza 2). */
+  plan?: string;
   /** Opțional: precompletare email la Checkout (client RO). */
   customerEmail?: string;
 };
 
 /**
- * POST — creează o sesiune Stripe Checkout în mod subscription (abonament lunar).
- * Prețul vine din `STRIPE_SUBSCRIPTION_PRICE_ID` (nu acceptăm price arbitrar din body — mai sigur).
+ * POST — Stripe Checkout subscription (pregătit; UI încă folosește WhatsApp).
+ * Prețul vine din env (STRIPE_PRICE_* sau STRIPE_SUBSCRIPTION_PRICE_ID), nu din client.
  */
 export async function POST(request: Request) {
   let body: CheckoutBody = {};
@@ -24,14 +26,16 @@ export async function POST(request: Request) {
 
   try {
     const stripe = getStripe();
-    const priceId = getSubscriptionPriceId();
+    const priceId = resolveSubscriptionPriceId(body.plan);
     const origin = getSiteUrl();
+    const planMeta =
+      typeof body.plan === "string" ? body.plan.trim().toLowerCase() : "mentenanta";
 
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${origin}/?abonament=ok&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/?abonament=anulat`,
+      success_url: `${origin}/asigurare-digitala?abonament=ok&session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/asigurare-digitala?abonament=anulat`,
       locale: "ro",
       allow_promotion_codes: true,
       customer_email:
@@ -39,11 +43,13 @@ export async function POST(request: Request) {
           ? body.customerEmail.trim()
           : undefined,
       metadata: {
-        product: "mentenanta",
+        product: "asigurare-digitala",
+        plan: planMeta,
       },
       subscription_data: {
         metadata: {
-          product: "mentenanta",
+          product: "asigurare-digitala",
+          plan: planMeta,
         },
       },
     });
