@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 
 type NavItem = { id: string; label: string };
 
@@ -14,16 +14,6 @@ const items: NavItem[] = [
   { id: "despre", label: "Despre" },
   { id: "contact", label: "Contact" },
 ];
-
-function subscribePointerCoarse(onStoreChange: () => void) {
-  const mq = window.matchMedia("(pointer: coarse)");
-  mq.addEventListener("change", onStoreChange);
-  return () => mq.removeEventListener("change", onStoreChange);
-}
-
-function snapshotPointerCoarse() {
-  return window.matchMedia("(pointer: coarse)").matches;
-}
 
 function scrollPageToTop() {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -46,15 +36,8 @@ export function Navbar() {
   const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const touchPrimary = useSyncExternalStore(
-    subscribePointerCoarse,
-    snapshotPointerCoarse,
-    () => false,
-  );
 
   useEffect(() => {
-    if (touchPrimary) return;
-
     const onScroll = () => {
       const next = window.scrollY > 8;
       setScrolled((prev) => (prev === next ? prev : next));
@@ -62,22 +45,18 @@ export function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [touchPrimary]);
+  }, []);
 
-  const headerSurface = touchPrimary
-    ? "bg-black/92 shadow-[0_8px_32px_rgba(0,0,0,0.35)]"
-    : scrolled
-      ? "bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
-      : "bg-black/0 backdrop-blur-0";
+  const headerSurface = scrolled
+    ? "bg-black/40 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+    : "bg-black/0 backdrop-blur-0";
 
   return (
     <header
       className={[
         "fixed inset-x-0 top-0 z-50 pt-[env(safe-area-inset-top)]",
         "border-b border-white/10",
-        touchPrimary
-          ? ""
-          : "transition-[background,box-shadow,backdrop-filter] duration-500",
+        "transition-[background,box-shadow,backdrop-filter] duration-500",
         headerSurface,
       ].join(" ")}
     >
